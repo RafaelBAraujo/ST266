@@ -1,0 +1,9 @@
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe.config
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\bin\Debug\PixelCalc.pdb
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.csprojResolveAssemblyReference.cache
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Properties.Resources.resources
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.csproj.GenerateResource.Cache
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.exe
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.pdb
+c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Form1.resources
