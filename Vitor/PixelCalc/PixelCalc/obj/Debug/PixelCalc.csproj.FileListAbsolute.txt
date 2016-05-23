@@ -7,3 +7,12 @@ c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Deb
 c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.exe
 c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.pdb
 c:\users\vitor\documents\visual studio 2015\Projects\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Form1.resources
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe.config
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.exe
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.pdb
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.pdb
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.csprojResolveAssemblyReference.cache
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Form1.resources
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Properties.Resources.resources
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.csproj.GenerateResource.Cache
