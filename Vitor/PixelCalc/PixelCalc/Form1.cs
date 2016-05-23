@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PixelCalc
@@ -17,8 +10,9 @@ namespace PixelCalc
             InitializeComponent();
         }
 
-        double num1 = 0.0, num2 = 0.0,resultado=0.0;
-        int flag_num = 1;
+        int count;
+        double num1 = 0.0, resp = 0.0;
+
         private void completar_textbox(string n)
         {
             int tam = textBox1.TextLength;
@@ -81,8 +75,7 @@ namespace PixelCalc
 
         private void botao_limpar_Click(object sender, EventArgs e)
         {
-            num1 = 0;
-            num2 = 0;
+            count = 0;
             textBox1.Text = "0";
         }
 
@@ -106,7 +99,7 @@ namespace PixelCalc
             int carac = Convert.ToInt16(e.KeyChar);
             switch (carac)
             {
-                //FAZER BOTÃO ESC PARA O CLEAR
+                // Backspace
                 case 8:
                     if (textBox1.TextLength != 0)
                     {
@@ -121,19 +114,38 @@ namespace PixelCalc
                     else
                         textBox1.Text = "0";
                     break;
-                case 43:
-                    if (flag_num == 1)
+                // Enter
+                case 13:
+                    calcular(count);
+                    break;
+                // ESC (limpar)
+                case 27:
+                    count = 0;
+                    textBox1.Text = "0";
+                    break;
+                // * (Multiplicação)
+                case 42:
+                    if (textBox1.Text != "")
                     {
-                        num1 = Convert.ToDouble(textBox1.Text);
-                        textBox1.Text = "";
-                        flag_num = 2;
-                    }
-                    else
-                    {
-                        num2 = num1 + Convert.ToDouble(textBox1.Text);
-                        flag_num = 1;
+                        num1 = float.Parse(textBox1.Text);
+                        textBox1.Clear();
+                        textBox1.Focus();
+                        count = 3;
+                        existe_virgula = false;
                     }
                     break;
+                // + (Adição)
+                case 43:
+                    if (textBox1.Text != "")
+                    {
+                        num1 = float.Parse(textBox1.Text);
+                        textBox1.Clear();
+                        textBox1.Focus();
+                        count = 1;
+                        existe_virgula = false;
+                    }
+                    break;
+                // Vírgula
                 case 44:
                     if (!existe_virgula)
                     {
@@ -146,6 +158,18 @@ namespace PixelCalc
                         existe_virgula = true;
                     }
                     break;
+                // - (Subtração)
+                case 45:
+                    if (textBox1.Text != "")
+                    {
+                        num1 = float.Parse(textBox1.Text);
+                        textBox1.Clear();
+                        textBox1.Focus();
+                        count = 2;
+                        existe_virgula = false;
+                    }
+                    break;
+                // Ponto (Vírgula)
                 case 46:
                     if (!existe_virgula)
                     {
@@ -156,6 +180,17 @@ namespace PixelCalc
                         else
                             completar_textbox(",");
                         existe_virgula = true;
+                    }
+                    break;
+                // / (Divisão)
+                case 47:
+                    if (textBox1.Text != "")
+                    {
+                        num1 = float.Parse(textBox1.Text);
+                        textBox1.Clear();
+                        textBox1.Focus();
+                        count = 1;
+                        existe_virgula = false;
                     }
                     break;
                 case 48:
@@ -188,6 +223,10 @@ namespace PixelCalc
                 case 57:
                     completar_textbox("9");
                     break;
+                // = (igual)
+                case 61:
+                    calcular(count);
+                    break;
             }
         }
 
@@ -195,9 +234,7 @@ namespace PixelCalc
         {
             if (!existe_virgula)
             {
-                int tam = textBox1.TextLength;
-                string str = textBox1.Text;
-                if ((tam == 1) && (str == "0"))
+                if ((textBox1.TextLength == 1) && (textBox1.Text == "0"))
                     completar_textbox("0,");
                 else
                     completar_textbox(",");
@@ -207,22 +244,113 @@ namespace PixelCalc
 
         private void botao_somar_Click(object sender, EventArgs e)
         {
-            if (flag_num == 1)
+            if (textBox1.Text != "")
             {
-                num1 = Convert.ToDouble(textBox1.Text);
-                textBox1.Text = "";
-                flag_num = 2;
-            }
-            else
-            {
-                num2 = num1+Convert.ToDouble(textBox1.Text);
-                flag_num = 1;
+                num1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 1;
+                existe_virgula = false; 
             }
         }
 
-        private double somar()
+        private void botao_subtrair_Click(object sender, EventArgs e)
         {
-            return num1 + num2;
+            if (textBox1.Text != "")
+            {
+                num1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 2;
+                existe_virgula = false;
+            }
+        }
+   
+        private void botao_multiplicar_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                num1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 3;
+                existe_virgula = false;
+            }
+        }
+
+        private void botao_dividir_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                num1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 4;
+                existe_virgula = false;
+            }
+        }
+
+        private void botao_igual_Click(object sender, EventArgs e)
+        {
+            calcular(count);
+        }
+
+        int check = 1;
+        private void botao_maisoumenos_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "0")
+            {
+                if (textBox1.TextLength > 0)
+                {
+                    string text = textBox1.Text;
+                    if (check == 1)
+                    {
+                        textBox1.Text = "-" + textBox1.Text;
+                        check = 2;
+                    }
+                    else if (check == 2)
+                    {
+                        int lenght = textBox1.TextLength; textBox1.Clear();
+                        for (int i = 1; i < lenght; i++)
+                        {
+                            textBox1.Text = textBox1.Text + text[i];
+                        }
+                        check = 1;
+                    }
+                }
+                else
+                {
+                    textBox1.Text = "-";
+                }
+            }
+        }
+
+        public void calcular(int count)
+        {
+            switch(count)
+            {
+                case 1:
+                    resp = num1 + double.Parse(textBox1.Text);
+                    textBox1.Text = resp.ToString();
+                    break;
+                case 2:
+                    resp = num1 - double.Parse(textBox1.Text);
+                    textBox1.Text = resp.ToString();
+                    break;
+                case 3:
+                    resp = num1 * double.Parse(textBox1.Text);
+                    textBox1.Text = resp.ToString();
+                    break;
+                case 4:
+                    resp = num1 / double.Parse(textBox1.Text);
+                    textBox1.Text = resp.ToString();
+                    break;
+            }
+            int aux = Convert.ToInt16(resp);
+            if (resp == aux)
+                existe_virgula = false;
+            else
+                existe_virgula = true;
         }
     }
 }
