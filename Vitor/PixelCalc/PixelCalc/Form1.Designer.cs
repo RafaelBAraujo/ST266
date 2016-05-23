@@ -43,6 +43,11 @@
             this.botao_limpar = new System.Windows.Forms.Button();
             this.botao_virgula = new System.Windows.Forms.Button();
             this.botao_somar = new System.Windows.Forms.Button();
+            this.botao_igual = new System.Windows.Forms.Button();
+            this.botao_subtrair = new System.Windows.Forms.Button();
+            this.botao_multiplicar = new System.Windows.Forms.Button();
+            this.botao_dividir = new System.Windows.Forms.Button();
+            this.botao_maisoumenos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botao_1
@@ -217,7 +222,7 @@
             // botao_somar
             // 
             this.botao_somar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_somar.Location = new System.Drawing.Point(277, 186);
+            this.botao_somar.Location = new System.Drawing.Point(278, 166);
             this.botao_somar.Name = "botao_somar";
             this.botao_somar.Size = new System.Drawing.Size(75, 23);
             this.botao_somar.TabIndex = 14;
@@ -226,11 +231,76 @@
             this.botao_somar.UseVisualStyleBackColor = true;
             this.botao_somar.Click += new System.EventHandler(this.botao_somar_Click);
             // 
+            // botao_igual
+            // 
+            this.botao_igual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_igual.Location = new System.Drawing.Point(278, 186);
+            this.botao_igual.Name = "botao_igual";
+            this.botao_igual.Size = new System.Drawing.Size(75, 23);
+            this.botao_igual.TabIndex = 15;
+            this.botao_igual.TabStop = false;
+            this.botao_igual.Text = "=";
+            this.botao_igual.UseVisualStyleBackColor = true;
+            this.botao_igual.Click += new System.EventHandler(this.botao_igual_Click);
+            // 
+            // botao_subtrair
+            // 
+            this.botao_subtrair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_subtrair.Location = new System.Drawing.Point(278, 146);
+            this.botao_subtrair.Name = "botao_subtrair";
+            this.botao_subtrair.Size = new System.Drawing.Size(75, 23);
+            this.botao_subtrair.TabIndex = 16;
+            this.botao_subtrair.TabStop = false;
+            this.botao_subtrair.Text = "-";
+            this.botao_subtrair.UseVisualStyleBackColor = true;
+            this.botao_subtrair.Click += new System.EventHandler(this.botao_subtrair_Click);
+            // 
+            // botao_multiplicar
+            // 
+            this.botao_multiplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_multiplicar.Location = new System.Drawing.Point(278, 126);
+            this.botao_multiplicar.Name = "botao_multiplicar";
+            this.botao_multiplicar.Size = new System.Drawing.Size(75, 23);
+            this.botao_multiplicar.TabIndex = 17;
+            this.botao_multiplicar.TabStop = false;
+            this.botao_multiplicar.Text = "*";
+            this.botao_multiplicar.UseVisualStyleBackColor = true;
+            this.botao_multiplicar.Click += new System.EventHandler(this.botao_multiplicar_Click);
+            // 
+            // botao_dividir
+            // 
+            this.botao_dividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_dividir.Location = new System.Drawing.Point(278, 106);
+            this.botao_dividir.Name = "botao_dividir";
+            this.botao_dividir.Size = new System.Drawing.Size(75, 23);
+            this.botao_dividir.TabIndex = 18;
+            this.botao_dividir.TabStop = false;
+            this.botao_dividir.Text = "÷";
+            this.botao_dividir.UseVisualStyleBackColor = true;
+            this.botao_dividir.Click += new System.EventHandler(this.botao_dividir_Click);
+            // 
+            // botao_maisoumenos
+            // 
+            this.botao_maisoumenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_maisoumenos.Location = new System.Drawing.Point(61, 185);
+            this.botao_maisoumenos.Name = "botao_maisoumenos";
+            this.botao_maisoumenos.Size = new System.Drawing.Size(75, 23);
+            this.botao_maisoumenos.TabIndex = 19;
+            this.botao_maisoumenos.TabStop = false;
+            this.botao_maisoumenos.Text = "±";
+            this.botao_maisoumenos.UseVisualStyleBackColor = true;
+            this.botao_maisoumenos.Click += new System.EventHandler(this.botao_maisoumenos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 225);
+            this.Controls.Add(this.botao_maisoumenos);
+            this.Controls.Add(this.botao_dividir);
+            this.Controls.Add(this.botao_multiplicar);
+            this.Controls.Add(this.botao_subtrair);
+            this.Controls.Add(this.botao_igual);
             this.Controls.Add(this.botao_somar);
             this.Controls.Add(this.botao_virgula);
             this.Controls.Add(this.botao_limpar);
@@ -275,6 +345,11 @@
         private System.Windows.Forms.Button botao_limpar;
         private System.Windows.Forms.Button botao_virgula;
         private System.Windows.Forms.Button botao_somar;
+        private System.Windows.Forms.Button botao_igual;
+        private System.Windows.Forms.Button botao_subtrair;
+        private System.Windows.Forms.Button botao_multiplicar;
+        private System.Windows.Forms.Button botao_dividir;
+        private System.Windows.Forms.Button botao_maisoumenos;
     }
 }
 
