@@ -1,6 +1,6 @@
 ﻿namespace PixelCalc
 {
-    partial class Form1
+    partial class botao_cor
     {
         /// <summary>
         /// Required designer variable.
@@ -48,12 +48,19 @@
             this.botao_multiplicar = new System.Windows.Forms.Button();
             this.botao_dividir = new System.Windows.Forms.Button();
             this.botao_maisoumenos = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.group_box1 = new System.Windows.Forms.GroupBox();
+            this.RB_Binario = new System.Windows.Forms.RadioButton();
+            this.RB_Octal = new System.Windows.Forms.RadioButton();
+            this.RB_Hexadecimal = new System.Windows.Forms.RadioButton();
+            this.RB_Decimal = new System.Windows.Forms.RadioButton();
+            this.group_box1.SuspendLayout();
             this.SuspendLayout();
             // 
             // botao_1
             // 
             this.botao_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_1.Location = new System.Drawing.Point(61, 166);
+            this.botao_1.Location = new System.Drawing.Point(39, 164);
             this.botao_1.Name = "botao_1";
             this.botao_1.Size = new System.Drawing.Size(75, 23);
             this.botao_1.TabIndex = 0;
@@ -65,7 +72,7 @@
             // botao_2
             // 
             this.botao_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_2.Location = new System.Drawing.Point(133, 166);
+            this.botao_2.Location = new System.Drawing.Point(111, 164);
             this.botao_2.Name = "botao_2";
             this.botao_2.Size = new System.Drawing.Size(75, 23);
             this.botao_2.TabIndex = 1;
@@ -77,7 +84,7 @@
             // botao_3
             // 
             this.botao_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_3.Location = new System.Drawing.Point(205, 166);
+            this.botao_3.Location = new System.Drawing.Point(183, 164);
             this.botao_3.Name = "botao_3";
             this.botao_3.Size = new System.Drawing.Size(75, 23);
             this.botao_3.TabIndex = 2;
@@ -89,7 +96,7 @@
             // botao_4
             // 
             this.botao_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_4.Location = new System.Drawing.Point(61, 146);
+            this.botao_4.Location = new System.Drawing.Point(39, 144);
             this.botao_4.Name = "botao_4";
             this.botao_4.Size = new System.Drawing.Size(75, 23);
             this.botao_4.TabIndex = 3;
@@ -101,7 +108,7 @@
             // botao_5
             // 
             this.botao_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_5.Location = new System.Drawing.Point(133, 146);
+            this.botao_5.Location = new System.Drawing.Point(111, 144);
             this.botao_5.Name = "botao_5";
             this.botao_5.Size = new System.Drawing.Size(75, 23);
             this.botao_5.TabIndex = 4;
@@ -113,7 +120,7 @@
             // botao_6
             // 
             this.botao_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_6.Location = new System.Drawing.Point(205, 146);
+            this.botao_6.Location = new System.Drawing.Point(183, 144);
             this.botao_6.Name = "botao_6";
             this.botao_6.Size = new System.Drawing.Size(75, 23);
             this.botao_6.TabIndex = 5;
@@ -125,7 +132,7 @@
             // botao_7
             // 
             this.botao_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_7.Location = new System.Drawing.Point(61, 126);
+            this.botao_7.Location = new System.Drawing.Point(39, 124);
             this.botao_7.Name = "botao_7";
             this.botao_7.Size = new System.Drawing.Size(75, 23);
             this.botao_7.TabIndex = 6;
@@ -137,7 +144,7 @@
             // botao_8
             // 
             this.botao_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_8.Location = new System.Drawing.Point(133, 126);
+            this.botao_8.Location = new System.Drawing.Point(111, 124);
             this.botao_8.Name = "botao_8";
             this.botao_8.Size = new System.Drawing.Size(75, 23);
             this.botao_8.TabIndex = 7;
@@ -149,7 +156,7 @@
             // botao_9
             // 
             this.botao_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_9.Location = new System.Drawing.Point(205, 126);
+            this.botao_9.Location = new System.Drawing.Point(183, 124);
             this.botao_9.Name = "botao_9";
             this.botao_9.Size = new System.Drawing.Size(75, 23);
             this.botao_9.TabIndex = 8;
@@ -161,7 +168,7 @@
             // botao_0
             // 
             this.botao_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_0.Location = new System.Drawing.Point(133, 186);
+            this.botao_0.Location = new System.Drawing.Point(111, 184);
             this.botao_0.Name = "botao_0";
             this.botao_0.Size = new System.Drawing.Size(75, 23);
             this.botao_0.TabIndex = 9;
@@ -174,11 +181,11 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 35);
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(440, 50);
+            this.textBox1.Size = new System.Drawing.Size(340, 50);
             this.textBox1.TabIndex = 10;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -186,7 +193,7 @@
             // botao_apagar
             // 
             this.botao_apagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_apagar.Location = new System.Drawing.Point(205, 106);
+            this.botao_apagar.Location = new System.Drawing.Point(183, 104);
             this.botao_apagar.Name = "botao_apagar";
             this.botao_apagar.Size = new System.Drawing.Size(75, 23);
             this.botao_apagar.TabIndex = 11;
@@ -198,7 +205,7 @@
             // botao_limpar
             // 
             this.botao_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_limpar.Location = new System.Drawing.Point(133, 106);
+            this.botao_limpar.Location = new System.Drawing.Point(111, 104);
             this.botao_limpar.Name = "botao_limpar";
             this.botao_limpar.Size = new System.Drawing.Size(75, 23);
             this.botao_limpar.TabIndex = 12;
@@ -210,7 +217,7 @@
             // botao_virgula
             // 
             this.botao_virgula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_virgula.Location = new System.Drawing.Point(205, 186);
+            this.botao_virgula.Location = new System.Drawing.Point(183, 184);
             this.botao_virgula.Name = "botao_virgula";
             this.botao_virgula.Size = new System.Drawing.Size(75, 23);
             this.botao_virgula.TabIndex = 13;
@@ -222,7 +229,7 @@
             // botao_somar
             // 
             this.botao_somar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_somar.Location = new System.Drawing.Point(278, 166);
+            this.botao_somar.Location = new System.Drawing.Point(256, 164);
             this.botao_somar.Name = "botao_somar";
             this.botao_somar.Size = new System.Drawing.Size(75, 23);
             this.botao_somar.TabIndex = 14;
@@ -234,7 +241,7 @@
             // botao_igual
             // 
             this.botao_igual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_igual.Location = new System.Drawing.Point(278, 186);
+            this.botao_igual.Location = new System.Drawing.Point(256, 184);
             this.botao_igual.Name = "botao_igual";
             this.botao_igual.Size = new System.Drawing.Size(75, 23);
             this.botao_igual.TabIndex = 15;
@@ -246,7 +253,7 @@
             // botao_subtrair
             // 
             this.botao_subtrair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_subtrair.Location = new System.Drawing.Point(278, 146);
+            this.botao_subtrair.Location = new System.Drawing.Point(256, 144);
             this.botao_subtrair.Name = "botao_subtrair";
             this.botao_subtrair.Size = new System.Drawing.Size(75, 23);
             this.botao_subtrair.TabIndex = 16;
@@ -258,7 +265,7 @@
             // botao_multiplicar
             // 
             this.botao_multiplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_multiplicar.Location = new System.Drawing.Point(278, 126);
+            this.botao_multiplicar.Location = new System.Drawing.Point(256, 124);
             this.botao_multiplicar.Name = "botao_multiplicar";
             this.botao_multiplicar.Size = new System.Drawing.Size(75, 23);
             this.botao_multiplicar.TabIndex = 17;
@@ -270,7 +277,7 @@
             // botao_dividir
             // 
             this.botao_dividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_dividir.Location = new System.Drawing.Point(278, 106);
+            this.botao_dividir.Location = new System.Drawing.Point(256, 104);
             this.botao_dividir.Name = "botao_dividir";
             this.botao_dividir.Size = new System.Drawing.Size(75, 23);
             this.botao_dividir.TabIndex = 18;
@@ -282,7 +289,7 @@
             // botao_maisoumenos
             // 
             this.botao_maisoumenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_maisoumenos.Location = new System.Drawing.Point(61, 185);
+            this.botao_maisoumenos.Location = new System.Drawing.Point(39, 183);
             this.botao_maisoumenos.Name = "botao_maisoumenos";
             this.botao_maisoumenos.Size = new System.Drawing.Size(75, 23);
             this.botao_maisoumenos.TabIndex = 19;
@@ -291,11 +298,82 @@
             this.botao_maisoumenos.UseVisualStyleBackColor = true;
             this.botao_maisoumenos.Click += new System.EventHandler(this.botao_maisoumenos_Click);
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(39, 104);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 20;
+            this.button1.TabStop = false;
+            this.button1.Text = "Color";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // group_box1
+            // 
+            this.group_box1.Controls.Add(this.RB_Binario);
+            this.group_box1.Controls.Add(this.RB_Octal);
+            this.group_box1.Controls.Add(this.RB_Hexadecimal);
+            this.group_box1.Controls.Add(this.RB_Decimal);
+            this.group_box1.Location = new System.Drawing.Point(39, 62);
+            this.group_box1.Name = "group_box1";
+            this.group_box1.Size = new System.Drawing.Size(219, 36);
+            this.group_box1.TabIndex = 21;
+            this.group_box1.TabStop = false;
+            // 
+            // RB_Binario
+            // 
+            this.RB_Binario.AutoSize = true;
+            this.RB_Binario.Location = new System.Drawing.Point(165, 13);
+            this.RB_Binario.Name = "RB_Binario";
+            this.RB_Binario.Size = new System.Drawing.Size(43, 17);
+            this.RB_Binario.TabIndex = 3;
+            this.RB_Binario.Text = "BIN";
+            this.RB_Binario.UseVisualStyleBackColor = true;
+            this.RB_Binario.CheckedChanged += new System.EventHandler(this.RB_Binario_CheckedChanged);
+            // 
+            // RB_Octal
+            // 
+            this.RB_Octal.AutoSize = true;
+            this.RB_Octal.Location = new System.Drawing.Point(112, 13);
+            this.RB_Octal.Name = "RB_Octal";
+            this.RB_Octal.Size = new System.Drawing.Size(47, 17);
+            this.RB_Octal.TabIndex = 2;
+            this.RB_Octal.Text = "OCT";
+            this.RB_Octal.UseVisualStyleBackColor = true;
+            this.RB_Octal.CheckedChanged += new System.EventHandler(this.RB_Octal_CheckedChanged);
+            // 
+            // RB_Hexadecimal
+            // 
+            this.RB_Hexadecimal.AutoSize = true;
+            this.RB_Hexadecimal.Location = new System.Drawing.Point(59, 13);
+            this.RB_Hexadecimal.Name = "RB_Hexadecimal";
+            this.RB_Hexadecimal.Size = new System.Drawing.Size(47, 17);
+            this.RB_Hexadecimal.TabIndex = 1;
+            this.RB_Hexadecimal.Text = "HEX";
+            this.RB_Hexadecimal.UseVisualStyleBackColor = true;
+            this.RB_Hexadecimal.CheckedChanged += new System.EventHandler(this.RB_Hexadecimal_CheckedChanged);
+            // 
+            // RB_Decimal
+            // 
+            this.RB_Decimal.AutoSize = true;
+            this.RB_Decimal.Checked = true;
+            this.RB_Decimal.Location = new System.Drawing.Point(6, 13);
+            this.RB_Decimal.Name = "RB_Decimal";
+            this.RB_Decimal.Size = new System.Drawing.Size(47, 17);
+            this.RB_Decimal.TabIndex = 0;
+            this.RB_Decimal.TabStop = true;
+            this.RB_Decimal.Text = "DEC";
+            this.RB_Decimal.UseVisualStyleBackColor = true;
+            this.RB_Decimal.CheckedChanged += new System.EventHandler(this.RB_Decimal_CheckedChanged);
+            // 
+            // botao_cor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 225);
+            this.ClientSize = new System.Drawing.Size(364, 216);
+            this.Controls.Add(this.group_box1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.botao_maisoumenos);
             this.Controls.Add(this.botao_dividir);
             this.Controls.Add(this.botao_multiplicar);
@@ -319,10 +397,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "botao_cor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PixelCalc";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            this.group_box1.ResumeLayout(false);
+            this.group_box1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,6 +430,12 @@
         private System.Windows.Forms.Button botao_multiplicar;
         private System.Windows.Forms.Button botao_dividir;
         private System.Windows.Forms.Button botao_maisoumenos;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox group_box1;
+        private System.Windows.Forms.RadioButton RB_Binario;
+        private System.Windows.Forms.RadioButton RB_Octal;
+        private System.Windows.Forms.RadioButton RB_Hexadecimal;
+        private System.Windows.Forms.RadioButton RB_Decimal;
     }
 }
 
