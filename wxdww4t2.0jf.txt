@@ -1,0 +1,17 @@
+﻿Merge remote-tracking branch 'refs/remotes/origin/Estrutura_Nova'
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue May 31 19:26:24 2016 -0300
+#
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   Vitor/Grafico de Gantt.mpp
+#
+# Changes not staged for commit:
+#	modified:   Vitor/PixelCalc/.vs/PixelCalc/v14/.suo
+#
+
