@@ -13,6 +13,6 @@ C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelC
 C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe
 C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.pdb
 C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.csprojResolveAssemblyReference.cache
-C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Form1.resources
 C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Properties.Resources.resources
 C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.csproj.GenerateResource.Cache
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.botao_cor.resources
