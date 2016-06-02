@@ -5,19 +5,18 @@ using System.Drawing;
 
 namespace PixelCalc
 {
-    public partial class botao_cor : Form
+    public partial class Form1 : Form
     { 
-        public botao_cor()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        int count;
-       
+        int count;       
         int tipo_exib=1; //padrão é Decimal
                          // 1-Decimal 2-Hexa 3-Octal 4-Binário
-
         float num1 = 0.0F, resp = 0.0F;
+        string resFinal;
 
         private void completar_textbox(string n)
         {
@@ -79,6 +78,36 @@ namespace PixelCalc
             completar_textbox("9");
         }
 
+        private void botao_A_Click(object sender, EventArgs e)
+        {
+            completar_textbox("A");
+        }
+
+        private void botao_B_Click(object sender,EventArgs e)
+        {
+            completar_textbox("B");
+        }
+
+        private void botao_C_Click(object sender, EventArgs e)
+        {
+            completar_textbox("C");
+        }
+
+        private void botao_D_Click(object sender, EventArgs e)
+        {
+            completar_textbox("D");
+        }
+
+        private void botao_E_Click(object sender, EventArgs e)
+        {
+            completar_textbox("E");
+        }
+
+        private void botao_F_Click(object sender, EventArgs e)
+        {
+            completar_textbox("F");
+        }
+
         private void botao_limpar_Click(object sender, EventArgs e)
         {
             count = 0;
@@ -124,6 +153,10 @@ namespace PixelCalc
                 // Enter
                 case 13:
                     calcular(count);
+                    RB_Decimal.Enabled = true;
+                    RB_Hexadecimal.Enabled = true;
+                    RB_Octal.Enabled = true;
+                    RB_Binario.Enabled = true;
                     break;
                 // ESC (limpar)
                 case 27:
@@ -135,70 +168,176 @@ namespace PixelCalc
                 case 42:
                     if (textBox1.Text != "")
                     {
-                        num1 = float.Parse(textBox1.Text);
+                        if (tipo_exib != 1)
+                        {
+                            switch (tipo_exib)
+                            {
+                                case 2:
+                                    Converter_Base(16, 10);
+                                    break;
+                                case 3:
+                                    Converter_Base(8, 10);
+                                    break;
+                                case 4:
+                                    Converter_Base(2, 10);
+                                    break;
+                            }
+                            num1 = float.Parse(resFinal);
+                        }
+                        else
+                        {
+                            num1 = float.Parse(textBox1.Text);
+                        }
+
                         textBox1.Clear();
                         textBox1.Focus();
                         count = 3;
                         existe_virgula = false;
+                        RB_Binario.Enabled = false;
+                        RB_Decimal.Enabled = false;
+                        RB_Hexadecimal.Enabled = false;
+                        RB_Octal.Enabled = false;
+                        group_box1.Focus();
                     }
-                    break;
+                        break;
                 // + (Adição)
                 case 43:
                     if (textBox1.Text != "")
                     {
-                        num1 = float.Parse(textBox1.Text);
+                        if (tipo_exib != 1)
+                        {
+                            switch (tipo_exib)
+                            {
+                                case 2:
+                                    Converter_Base(16, 10);
+                                    break;
+                                case 3:
+                                    Converter_Base(8, 10);
+                                    break;
+                                case 4:
+                                    Converter_Base(2, 10);
+                                    break;
+                            }
+                            num1 = float.Parse(resFinal);
+                        }
+                        else
+                        {
+                            num1 = float.Parse(textBox1.Text);
+                        }
+
                         textBox1.Clear();
                         textBox1.Focus();
                         count = 1;
                         existe_virgula = false;
+                        RB_Binario.Enabled = false;
+                        RB_Decimal.Enabled = false;
+                        RB_Hexadecimal.Enabled = false;
+                        RB_Octal.Enabled = false;
+                        group_box1.Focus();
                     }
                     break;
                 // Vírgula
                 case 44:
-                    if (!existe_virgula)
+                    if (botao_virgula.Enabled == true)
                     {
-                        int tam = textBox1.TextLength;
-                        string str = textBox1.Text;
-                        if ((tam == 1) && (str == "0"))
-                            completar_textbox("0,");
-                        else
-                            completar_textbox(",");
-                        existe_virgula = true;
+                        if (!existe_virgula)
+                        {
+                            int tam = textBox1.TextLength;
+                            string str = textBox1.Text;
+                            if ((tam == 1) && (str == "0"))
+                                completar_textbox("0,");
+                            else
+                                completar_textbox(",");
+                            existe_virgula = true;
+                        }
                     }
                     break;
                 // - (Subtração)
                 case 45:
                     if (textBox1.Text != "")
                     {
-                        num1 = float.Parse(textBox1.Text);
+                        if (tipo_exib != 1)
+                        {
+                            switch (tipo_exib)
+                            {
+                                case 2:
+                                    Converter_Base(16, 10);
+                                    break;
+                                case 3:
+                                    Converter_Base(8, 10);
+                                    break;
+                                case 4:
+                                    Converter_Base(2, 10);
+                                    break;
+                            }
+                            num1 = float.Parse(resFinal);
+                        }
+                        else
+                        {
+                            num1 = float.Parse(textBox1.Text);
+                        }
+
                         textBox1.Clear();
                         textBox1.Focus();
                         count = 2;
                         existe_virgula = false;
+                        RB_Binario.Enabled = false;
+                        RB_Decimal.Enabled = false;
+                        RB_Hexadecimal.Enabled = false;
+                        RB_Octal.Enabled = false;
+                        group_box1.Focus();
                     }
-                    break;
+                        break;
                 // Ponto (Vírgula)
                 case 46:
-                    if (!existe_virgula)
+                    if (botao_virgula.Enabled == true)
                     {
-                        int tam = textBox1.TextLength;
-                        string str = textBox1.Text;
-                        if ((tam == 1) && (str == "0"))
-                            completar_textbox("0,");
-                        else
-                            completar_textbox(",");
-                        existe_virgula = true;
+                        if (!existe_virgula)
+                        {
+                            int tam = textBox1.TextLength;
+                            string str = textBox1.Text;
+                            if ((tam == 1) && (str == "0"))
+                                completar_textbox("0,");
+                            else
+                                completar_textbox(",");
+                            existe_virgula = true;
+                        }
                     }
                     break;
                 // / (Divisão)
                 case 47:
                     if (textBox1.Text != "")
                     {
-                        num1 = float.Parse(textBox1.Text);
+                        if (tipo_exib != 1)
+                        {
+                            switch (tipo_exib)
+                            {
+                                case 2:
+                                    Converter_Base(16, 10);
+                                    break;
+                                case 3:
+                                    Converter_Base(8, 10);
+                                    break;
+                                case 4:
+                                    Converter_Base(2, 10);
+                                    break;
+                            }
+                            num1 = float.Parse(resFinal);
+                        }
+                        else
+                        {
+                            num1 = float.Parse(textBox1.Text);
+                        }
+
                         textBox1.Clear();
                         textBox1.Focus();
                         count = 4;
                         existe_virgula = false;
+                        RB_Binario.Enabled = false;
+                        RB_Decimal.Enabled = false;
+                        RB_Hexadecimal.Enabled = false;
+                        RB_Octal.Enabled = false;
+                        group_box1.Focus();
                     }
                     break;
                 case 48:
@@ -208,32 +347,98 @@ namespace PixelCalc
                     completar_textbox("1");
                     break;
                 case 50:
+                    if (botao_2.Enabled==true)
                     completar_textbox("2");
                     break;
                 case 51:
+                    if (botao_3.Enabled==true)
                     completar_textbox("3");
                     break;
                 case 52:
+                    if (botao_4.Enabled==true)
                     completar_textbox("4");
                     break;
                 case 53:
+                    if (botao_5.Enabled==true)
                     completar_textbox("5");
                     break;
                 case 54:
+                    if (botao_6.Enabled==true)
                     completar_textbox("6");
                     break;
                 case 55:
+                    if (botao_7.Enabled==true)
                     completar_textbox("7");
                     break;
                 case 56:
+                    if (botao_8.Enabled==true)
                     completar_textbox("8");
                     break;
                 case 57:
+                    if (botao_9.Enabled==true)
                     completar_textbox("9");
                     break;
                 // = (igual)
                 case 61:
                     calcular(count);
+                    RB_Decimal.Enabled = true;
+                    RB_Hexadecimal.Enabled = true;
+                    RB_Octal.Enabled = true;
+                    RB_Binario.Enabled = true;
+                    break;
+                // A
+                case 65:
+                    if (botao_A.Enabled == true)
+                    completar_textbox("A");
+                    break;
+                case 97:
+                    if (botao_A.Enabled == true)
+                        completar_textbox("A");
+                    break;
+                //B
+                case 66:
+                    if (botao_B.Enabled == true)
+                        completar_textbox("B");
+                    break;
+                case 98:
+                    if (botao_B.Enabled == true)
+                        completar_textbox("B");
+                    break;
+                //C
+                case 67:
+                    if (botao_C.Enabled==true)
+                        completar_textbox("C");
+                    break;
+                case 99:
+                    if (botao_C.Enabled == true)
+                        completar_textbox("C");
+                    break;
+                //D
+                case 68:
+                    if (botao_D.Enabled == true)
+                        completar_textbox("D");
+                    break;
+                case 100:
+                    if (botao_D.Enabled == true)
+                        completar_textbox("D");
+                    break;
+                //E
+                case 69:
+                    if (botao_E.Enabled == true)
+                        completar_textbox("E");
+                    break;
+                case 101:
+                    if (botao_E.Enabled == true)
+                        completar_textbox("E");
+                    break;
+                //F
+                case 70:
+                    if (botao_F.Enabled == true)
+                        completar_textbox("F");
+                    break;
+                case 102:
+                    if (botao_F.Enabled == true)
+                        completar_textbox("F");
                     break;
             }
         }
@@ -254,11 +459,36 @@ namespace PixelCalc
         {
             if (textBox1.Text != "")
             {
-                num1 = float.Parse(textBox1.Text);
+                if (tipo_exib != 1)
+                {
+                    switch (tipo_exib)
+                    {
+                        case 2:
+                            Converter_Base(16, 10);
+                            break;
+                        case 3:
+                            Converter_Base(8, 10);
+                            break;
+                        case 4:
+                            Converter_Base(2, 10);
+                            break;
+                    }
+                    num1 = float.Parse(resFinal);
+                }
+                else
+                {
+                    num1 = float.Parse(textBox1.Text);
+                }
+
                 textBox1.Clear();
                 textBox1.Focus();
                 count = 1;
-                existe_virgula = false; 
+                existe_virgula = false;
+                RB_Binario.Enabled = false;
+                RB_Decimal.Enabled = false;
+                RB_Hexadecimal.Enabled = false;
+                RB_Octal.Enabled = false;
+                group_box1.Focus();
             }
         }
 
@@ -266,11 +496,36 @@ namespace PixelCalc
         {
             if (textBox1.Text != "")
             {
-                num1 = float.Parse(textBox1.Text);
+                if (tipo_exib != 1)
+                {
+                    switch (tipo_exib)
+                    {
+                        case 2:
+                            Converter_Base(16, 10);
+                            break;
+                        case 3:
+                            Converter_Base(8, 10);
+                            break;
+                        case 4:
+                            Converter_Base(2, 10);
+                            break;
+                    }
+                    num1 = float.Parse(resFinal);
+                }
+                else
+                {
+                    num1 = float.Parse(textBox1.Text);
+                }
+
                 textBox1.Clear();
                 textBox1.Focus();
                 count = 2;
                 existe_virgula = false;
+                RB_Binario.Enabled = false;
+                RB_Decimal.Enabled = false;
+                RB_Hexadecimal.Enabled = false;
+                RB_Octal.Enabled = false;
+                group_box1.Focus();
             }
         }
 
@@ -278,11 +533,36 @@ namespace PixelCalc
         {
             if (textBox1.Text != "")
             {
-                num1 = float.Parse(textBox1.Text);
+                if (tipo_exib != 1)
+                {
+                    switch (tipo_exib)
+                    {
+                        case 2:
+                            Converter_Base(16, 10);
+                            break;
+                        case 3:
+                            Converter_Base(8, 10);
+                            break;
+                        case 4:
+                            Converter_Base(2, 10);
+                            break;
+                    }
+                    num1 = float.Parse(resFinal);
+                }
+                else
+                {
+                    num1 = float.Parse(textBox1.Text);
+                }
+
                 textBox1.Clear();
                 textBox1.Focus();
                 count = 3;
                 existe_virgula = false;
+                RB_Binario.Enabled = false;
+                RB_Decimal.Enabled = false;
+                RB_Hexadecimal.Enabled = false;
+                RB_Octal.Enabled = false;
+                group_box1.Focus();
             }
         }
 
@@ -290,20 +570,49 @@ namespace PixelCalc
         {
             if (textBox1.Text != "")
             {
-                num1 = float.Parse(textBox1.Text);
+                if (tipo_exib != 1)
+                {
+                    switch (tipo_exib)
+                    {
+                        case 2:
+                            Converter_Base(16, 10);
+                            break;
+                        case 3:
+                            Converter_Base(8, 10);
+                            break;
+                        case 4:
+                            Converter_Base(2, 10);
+                            break;
+                    }
+                    num1 = float.Parse(resFinal);
+                }
+                else
+                {
+                    num1 = float.Parse(textBox1.Text);
+                }
+
                 textBox1.Clear();
                 textBox1.Focus();
                 count = 4;
                 existe_virgula = false;
+                RB_Binario.Enabled = false;
+                RB_Decimal.Enabled = false;
+                RB_Hexadecimal.Enabled = false;
+                RB_Octal.Enabled = false;
+                group_box1.Focus();
             }
         }
 
         private void botao_igual_Click(object sender, EventArgs e)
         {
             calcular(count);
+            RB_Binario.Enabled = true;
+            RB_Decimal.Enabled = true;
+            RB_Hexadecimal.Enabled = true;
+            RB_Octal.Enabled = true;
         }
 
-        int check = 1;
+        int check = 1;//variável auxiliar ao método do botao +-
 
         private void botao_maisoumenos_Click(object sender, EventArgs e)
         {
@@ -341,20 +650,116 @@ namespace PixelCalc
                 switch (count)
                 {
                     case 1:
-                        resp = num1 + float.Parse(textBox1.Text);
-                        textBox1.Text = resp.ToString();
+                        if (tipo_exib == 1)
+                        {
+                            resp = num1 + float.Parse(textBox1.Text);
+                            textBox1.Text = resp.ToString();
+                        }
+                        else if (tipo_exib == 2)
+                        {
+                            Converter_Base(16, 10);
+                            resp = num1 + float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 16);
+                        }
+                        else if (tipo_exib == 3)
+                        {
+                            Converter_Base(8, 10);
+                            resp = num1 + float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 8);
+                        }
+                        else if (tipo_exib == 4)
+                        {
+                            Converter_Base(2, 10);
+                            resp = num1 + float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 2);
+                        }
                         break;
                     case 2:
-                        resp = num1 - float.Parse(textBox1.Text);
-                        textBox1.Text = resp.ToString();
+                        if (tipo_exib == 1)
+                        {
+                            resp = num1 - float.Parse(textBox1.Text);
+                            textBox1.Text = resp.ToString();
+                        }
+                        else if (tipo_exib == 2)
+                        {
+                            Converter_Base(16, 10);
+                            resp = num1 - float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 16);
+                        }
+                        else if (tipo_exib == 3)
+                        {
+                            Converter_Base(8, 10);
+                            resp = num1 - float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 8);
+                        }
+                        else if (tipo_exib == 4)
+                        {
+                            Converter_Base(2, 10);
+                            resp = num1 - float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 2);
+                        }
                         break;
-                    case 3:
-                        resp = num1 * float.Parse(textBox1.Text);
-                        textBox1.Text = resp.ToString();
+                        case 3:
+                        if (tipo_exib == 1)
+                        {
+                            resp = num1 * float.Parse(textBox1.Text);
+                            textBox1.Text = resp.ToString();
+                        }
+                        else if (tipo_exib == 2)
+                        {
+                            Converter_Base(16, 10);
+                            resp = num1 * float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 16);
+                        }
+                        else if (tipo_exib == 3)
+                        {
+                            Converter_Base(8, 10);
+                            resp = num1 * float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 8);
+                        }
+                        else if (tipo_exib == 4)
+                        {
+                            Converter_Base(2, 10);
+                            resp = num1 * float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 2);
+                        }
                         break;
                     case 4:
-                        resp = num1 / float.Parse(textBox1.Text);
-                        textBox1.Text = resp.ToString();
+                        if (tipo_exib == 1)
+                        {
+                            resp = num1 / float.Parse(textBox1.Text);
+                            textBox1.Text = resp.ToString();
+                        }
+                        else if (tipo_exib == 2)
+                        {
+                            Converter_Base(16, 10);
+                            resp = num1 / float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 16);
+                        }
+                        else if (tipo_exib == 3)
+                        {
+                            Converter_Base(8, 10);
+                            resp = num1 / float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 8);
+                        }
+                        else if (tipo_exib == 4)
+                        {
+                            Converter_Base(2, 10);
+                            resp = num1 / float.Parse(resFinal);
+                            textBox1.Text = resp.ToString();
+                            Converter_Base(10, 2);
+                        }
                         break;
                 }
                 long aux = Convert.ToInt64(resp);
@@ -368,12 +773,22 @@ namespace PixelCalc
 
         private void RB_Decimal_CheckedChanged(object sender, EventArgs e)
         {
-            botao_virgula.Enabled = true;
             switch (tipo_exib)
             {
                 //Base Hexadecimal
                 case 2:
                     Converter_Base(16, 10);
+                    botao_A.Visible = false;
+                    botao_B.Visible = false;
+                    botao_C.Visible = false;
+                    botao_D.Visible = false;
+                    botao_E.Visible = false;
+                    botao_A.Enabled = false;
+                    botao_B.Enabled = false;
+                    botao_C.Enabled = false;
+                    botao_D.Enabled = false;
+                    botao_E.Enabled = false;
+                    Height = 255;  
                     break;
                 //Base Octal
                 case 3:
@@ -387,10 +802,33 @@ namespace PixelCalc
             tipo_exib = 1;
             if (textBox1.TextLength < 20)
                 textBox1.Font = new Font(textBox1.Font.FontFamily, 22);
+
+            botao_virgula.Enabled = true;
+            botao_maisoumenos.Enabled = true;
+            botao_2.Enabled = true;
+            botao_3.Enabled = true;
+            botao_4.Enabled = true;
+            botao_5.Enabled = true;
+            botao_6.Enabled = true;
+            botao_7.Enabled = true;
+            botao_8.Enabled = true;
+            botao_9.Enabled = true;
         }
 
         private void RB_Hexadecimal_CheckedChanged(object sender, EventArgs e)
         {
+            Height = 290;
+            botao_A.Visible = true;
+            botao_B.Visible = true;
+            botao_C.Visible = true;
+            botao_D.Visible = true;
+            botao_E.Visible = true;
+            botao_A.Enabled = true;
+            botao_B.Enabled = true;
+            botao_C.Enabled = true;
+            botao_D.Enabled = true;
+            botao_E.Enabled = true;
+
             switch (tipo_exib)
             {
                 //Base Decimal
@@ -412,6 +850,15 @@ namespace PixelCalc
 
             botao_virgula.Enabled = false;
             existe_virgula = false;
+            botao_maisoumenos.Enabled = false;
+            botao_2.Enabled = true;
+            botao_3.Enabled = true;
+            botao_4.Enabled = true;
+            botao_5.Enabled = true;
+            botao_6.Enabled = true;
+            botao_7.Enabled = true;
+            botao_8.Enabled = true;
+            botao_9.Enabled = true;
         }
 
         private void RB_Octal_CheckedChanged(object sender, EventArgs e)
@@ -425,6 +872,17 @@ namespace PixelCalc
                 //Base HexaDecimal
                 case 2:
                     Converter_Base(16,8);
+                    botao_A.Visible = false;
+                    botao_B.Visible = false;
+                    botao_C.Visible = false;
+                    botao_D.Visible = false;
+                    botao_E.Visible = false;
+                    botao_A.Enabled = false;
+                    botao_B.Enabled = false;
+                    botao_C.Enabled = false;
+                    botao_D.Enabled = false;
+                    botao_E.Enabled = false;
+                    Height = 255;
                     break;
                 //Base Binária
                 case 4:
@@ -437,6 +895,15 @@ namespace PixelCalc
 
             botao_virgula.Enabled = false;
             existe_virgula = false;
+            botao_2.Enabled = true;
+            botao_3.Enabled = true;
+            botao_4.Enabled = true;
+            botao_5.Enabled = true;
+            botao_6.Enabled = true;
+            botao_7.Enabled = true;
+            botao_8.Enabled = false;
+            botao_9.Enabled = false;
+            botao_maisoumenos.Enabled = false;
         }
 
         private void RB_Binario_CheckedChanged(object sender, EventArgs e)
@@ -450,6 +917,17 @@ namespace PixelCalc
                 //Base HexaDecimal
                 case 2:
                     Converter_Base(16, 2);
+                    botao_A.Visible = false;
+                    botao_B.Visible = false;
+                    botao_C.Visible = false;
+                    botao_D.Visible = false;
+                    botao_E.Visible = false;
+                    botao_A.Enabled = false;
+                    botao_B.Enabled = false;
+                    botao_C.Enabled = false;
+                    botao_D.Enabled = false;
+                    botao_E.Enabled = false;
+                    Height = 255;
                     break;
                 //Base Octal
                 case 3:
@@ -462,13 +940,27 @@ namespace PixelCalc
 
             botao_virgula.Enabled = false;
             existe_virgula = false;
+            botao_maisoumenos.Enabled = false;
+            botao_2.Enabled = false;
+            botao_3.Enabled = false;
+            botao_4.Enabled = false;
+            botao_5.Enabled = false;
+            botao_6.Enabled = false;
+            botao_7.Enabled = false;
+            botao_8.Enabled = false;
+            botao_9.Enabled = false;
+        }
+
+        private void botao_cor_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Converter_Base(int baseorigem, int basedestino)
         {
             long resParcial;
             int qtdCaracteres, aux2, restoMod;
-            string caracteres = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", numDigitado, resFinal, aux, baseValida;
+            string caracteres = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", numDigitado, aux, baseValida;
             float aux3 = 0.0F;
             //limpar variáveis para próximos cálculos
             baseValida = "1";
@@ -561,4 +1053,3 @@ namespace PixelCalc
         }
     }
 }
-

@@ -16,7 +16,7 @@ namespace PixelCalc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new botao_cor());
+            Application.Run(new Form1());
         }
     }
 }

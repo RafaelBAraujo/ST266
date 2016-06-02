@@ -1,6 +1,6 @@
 ﻿namespace PixelCalc
 {
-    partial class botao_cor
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -48,13 +48,23 @@
             this.botao_multiplicar = new System.Windows.Forms.Button();
             this.botao_dividir = new System.Windows.Forms.Button();
             this.botao_maisoumenos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botao_cor = new System.Windows.Forms.Button();
             this.group_box1 = new System.Windows.Forms.GroupBox();
             this.RB_Binario = new System.Windows.Forms.RadioButton();
             this.RB_Octal = new System.Windows.Forms.RadioButton();
             this.RB_Hexadecimal = new System.Windows.Forms.RadioButton();
             this.RB_Decimal = new System.Windows.Forms.RadioButton();
+            this.botao_A = new System.Windows.Forms.Button();
+            this.botao_B = new System.Windows.Forms.Button();
+            this.botao_C = new System.Windows.Forms.Button();
+            this.botao_D = new System.Windows.Forms.Button();
+            this.botao_E = new System.Windows.Forms.Button();
+            this.botao_F = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_box1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // botao_1
@@ -289,7 +299,7 @@
             // botao_maisoumenos
             // 
             this.botao_maisoumenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_maisoumenos.Location = new System.Drawing.Point(39, 183);
+            this.botao_maisoumenos.Location = new System.Drawing.Point(39, 184);
             this.botao_maisoumenos.Name = "botao_maisoumenos";
             this.botao_maisoumenos.Size = new System.Drawing.Size(75, 23);
             this.botao_maisoumenos.TabIndex = 19;
@@ -298,16 +308,17 @@
             this.botao_maisoumenos.UseVisualStyleBackColor = true;
             this.botao_maisoumenos.Click += new System.EventHandler(this.botao_maisoumenos_Click);
             // 
-            // button1
+            // botao_cor
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(39, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.TabStop = false;
-            this.button1.Text = "Color";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botao_cor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_cor.Location = new System.Drawing.Point(39, 104);
+            this.botao_cor.Name = "botao_cor";
+            this.botao_cor.Size = new System.Drawing.Size(75, 23);
+            this.botao_cor.TabIndex = 20;
+            this.botao_cor.TabStop = false;
+            this.botao_cor.Text = "Color";
+            this.botao_cor.UseVisualStyleBackColor = true;
+            this.botao_cor.Click += new System.EventHandler(this.botao_cor_Click);
             // 
             // group_box1
             // 
@@ -367,13 +378,110 @@
             this.RB_Decimal.UseVisualStyleBackColor = true;
             this.RB_Decimal.CheckedChanged += new System.EventHandler(this.RB_Decimal_CheckedChanged);
             // 
-            // botao_cor
+            // botao_A
+            // 
+            this.botao_A.Location = new System.Drawing.Point(39, 204);
+            this.botao_A.Name = "botao_A";
+            this.botao_A.Size = new System.Drawing.Size(75, 23);
+            this.botao_A.TabIndex = 0;
+            this.botao_A.TabStop = false;
+            this.botao_A.Text = "A";
+            this.botao_A.UseVisualStyleBackColor = true;
+            this.botao_A.Visible = false;
+            this.botao_A.Click += new System.EventHandler(this.botao_A_Click);
+            // 
+            // botao_B
+            // 
+            this.botao_B.Location = new System.Drawing.Point(111, 204);
+            this.botao_B.Name = "botao_B";
+            this.botao_B.Size = new System.Drawing.Size(75, 23);
+            this.botao_B.TabIndex = 0;
+            this.botao_B.TabStop = false;
+            this.botao_B.Text = "B";
+            this.botao_B.UseVisualStyleBackColor = true;
+            this.botao_B.Visible = false;
+            this.botao_B.Click += new System.EventHandler(this.botao_B_Click);
+            // 
+            // botao_C
+            // 
+            this.botao_C.Location = new System.Drawing.Point(183, 204);
+            this.botao_C.Name = "botao_C";
+            this.botao_C.Size = new System.Drawing.Size(75, 23);
+            this.botao_C.TabIndex = 0;
+            this.botao_C.TabStop = false;
+            this.botao_C.Text = "C";
+            this.botao_C.UseVisualStyleBackColor = true;
+            this.botao_C.Visible = false;
+            this.botao_C.Click += new System.EventHandler(this.botao_C_Click);
+            // 
+            // botao_D
+            // 
+            this.botao_D.Location = new System.Drawing.Point(39, 224);
+            this.botao_D.Name = "botao_D";
+            this.botao_D.Size = new System.Drawing.Size(75, 23);
+            this.botao_D.TabIndex = 0;
+            this.botao_D.TabStop = false;
+            this.botao_D.Text = "D";
+            this.botao_D.UseVisualStyleBackColor = true;
+            this.botao_D.Visible = false;
+            this.botao_D.Click += new System.EventHandler(this.botao_D_Click);
+            // 
+            // botao_E
+            // 
+            this.botao_E.Location = new System.Drawing.Point(111, 224);
+            this.botao_E.Name = "botao_E";
+            this.botao_E.Size = new System.Drawing.Size(75, 23);
+            this.botao_E.TabIndex = 0;
+            this.botao_E.TabStop = false;
+            this.botao_E.Text = "E";
+            this.botao_E.UseVisualStyleBackColor = true;
+            this.botao_E.Visible = false;
+            this.botao_E.Click += new System.EventHandler(this.botao_E_Click);
+            // 
+            // botao_F
+            // 
+            this.botao_F.Location = new System.Drawing.Point(183, 224);
+            this.botao_F.Name = "botao_F";
+            this.botao_F.Size = new System.Drawing.Size(75, 23);
+            this.botao_F.TabIndex = 0;
+            this.botao_F.TabStop = false;
+            this.botao_F.Text = "F";
+            this.botao_F.UseVisualStyleBackColor = true;
+            this.botao_F.Visible = false;
+            this.botao_F.Click += new System.EventHandler(this.botao_F_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Location = new System.Drawing.Point(385, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(236, 195);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(180, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 216);
+            this.ClientSize = new System.Drawing.Size(633, 216);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.botao_F);
+            this.Controls.Add(this.botao_E);
+            this.Controls.Add(this.botao_D);
+            this.Controls.Add(this.botao_C);
+            this.Controls.Add(this.botao_B);
+            this.Controls.Add(this.botao_A);
             this.Controls.Add(this.group_box1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botao_cor);
             this.Controls.Add(this.botao_maisoumenos);
             this.Controls.Add(this.botao_dividir);
             this.Controls.Add(this.botao_multiplicar);
@@ -397,12 +505,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "botao_cor";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PixelCalc";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.group_box1.ResumeLayout(false);
             this.group_box1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,12 +540,20 @@
         private System.Windows.Forms.Button botao_multiplicar;
         private System.Windows.Forms.Button botao_dividir;
         private System.Windows.Forms.Button botao_maisoumenos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botao_cor;
         private System.Windows.Forms.GroupBox group_box1;
         private System.Windows.Forms.RadioButton RB_Binario;
         private System.Windows.Forms.RadioButton RB_Octal;
         private System.Windows.Forms.RadioButton RB_Hexadecimal;
         private System.Windows.Forms.RadioButton RB_Decimal;
+        private System.Windows.Forms.Button botao_A;
+        private System.Windows.Forms.Button botao_B;
+        private System.Windows.Forms.Button botao_C;
+        private System.Windows.Forms.Button botao_D;
+        private System.Windows.Forms.Button botao_E;
+        private System.Windows.Forms.Button botao_F;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
