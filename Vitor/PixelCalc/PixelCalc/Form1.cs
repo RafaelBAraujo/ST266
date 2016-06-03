@@ -12,7 +12,7 @@ namespace PixelCalc
             InitializeComponent();
         }
 
-        int count;       
+        int count,cor_ativ=0;       
         int tipo_exib=1; //padrão é Decimal
                          // 1-Decimal 2-Hexa 3-Octal 4-Binário
         float num1 = 0.0F, resp = 0.0F;
@@ -133,313 +133,316 @@ namespace PixelCalc
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             int carac = Convert.ToInt16(e.KeyChar);
-            switch (carac)
+            if (cor_ativ==0)
             {
-                // Backspace
-                case 8:
-                    if (textBox1.TextLength != 0)
-                    {
-                        if (textBox1.Text[textBox1.TextLength - 1] == ',')
-                            existe_virgula = false;
+                switch (carac)
+                {
+                    // Backspace
+                    case 8:
+                        if (textBox1.TextLength != 0)
+                        {
+                            if (textBox1.Text[textBox1.TextLength - 1] == ',')
+                                existe_virgula = false;
 
-                        textBox1.Text = textBox1.Text.Remove(textBox1.TextLength - 1);
+                            textBox1.Text = textBox1.Text.Remove(textBox1.TextLength - 1);
 
-                        if (textBox1.TextLength == 0)
+                            if (textBox1.TextLength == 0)
+                                textBox1.Text = "0";
+                        }
+                        else
                             textBox1.Text = "0";
-                    }
-                    else
+                        break;
+                    // Enter
+                    case 13:
+                        calcular(count);
+                        RB_Decimal.Enabled = true;
+                        RB_Hexadecimal.Enabled = true;
+                        RB_Octal.Enabled = true;
+                        RB_Binario.Enabled = true;
+                        break;
+                    // ESC (limpar)
+                    case 27:
+                        count = 0;
                         textBox1.Text = "0";
-                    break;
-                // Enter
-                case 13:
-                    calcular(count);
-                    RB_Decimal.Enabled = true;
-                    RB_Hexadecimal.Enabled = true;
-                    RB_Octal.Enabled = true;
-                    RB_Binario.Enabled = true;
-                    break;
-                // ESC (limpar)
-                case 27:
-                    count = 0;
-                    textBox1.Text = "0";
-                    existe_virgula = false;
-                    break;
-                // * (Multiplicação)
-                case 42:
-                    if (textBox1.Text != "")
-                    {
-                        if (tipo_exib != 1)
-                        {
-                            switch (tipo_exib)
-                            {
-                                case 2:
-                                    Converter_Base(16, 10);
-                                    break;
-                                case 3:
-                                    Converter_Base(8, 10);
-                                    break;
-                                case 4:
-                                    Converter_Base(2, 10);
-                                    break;
-                            }
-                            num1 = float.Parse(resFinal);
-                        }
-                        else
-                        {
-                            num1 = float.Parse(textBox1.Text);
-                        }
-
-                        textBox1.Clear();
-                        textBox1.Focus();
-                        count = 3;
                         existe_virgula = false;
-                        RB_Binario.Enabled = false;
-                        RB_Decimal.Enabled = false;
-                        RB_Hexadecimal.Enabled = false;
-                        RB_Octal.Enabled = false;
-                        group_box1.Focus();
-                    }
                         break;
-                // + (Adição)
-                case 43:
-                    if (textBox1.Text != "")
-                    {
-                        if (tipo_exib != 1)
+                    // * (Multiplicação)
+                    case 42:
+                        if (textBox1.Text != "")
                         {
-                            switch (tipo_exib)
+                            if (tipo_exib != 1)
                             {
-                                case 2:
-                                    Converter_Base(16, 10);
-                                    break;
-                                case 3:
-                                    Converter_Base(8, 10);
-                                    break;
-                                case 4:
-                                    Converter_Base(2, 10);
-                                    break;
+                                switch (tipo_exib)
+                                {
+                                    case 2:
+                                        Converter_Base(16, 10);
+                                        break;
+                                    case 3:
+                                        Converter_Base(8, 10);
+                                        break;
+                                    case 4:
+                                        Converter_Base(2, 10);
+                                        break;
+                                }
+                                num1 = float.Parse(resFinal);
                             }
-                            num1 = float.Parse(resFinal);
-                        }
-                        else
-                        {
-                            num1 = float.Parse(textBox1.Text);
-                        }
-
-                        textBox1.Clear();
-                        textBox1.Focus();
-                        count = 1;
-                        existe_virgula = false;
-                        RB_Binario.Enabled = false;
-                        RB_Decimal.Enabled = false;
-                        RB_Hexadecimal.Enabled = false;
-                        RB_Octal.Enabled = false;
-                        group_box1.Focus();
-                    }
-                    break;
-                // Vírgula
-                case 44:
-                    if (botao_virgula.Enabled == true)
-                    {
-                        if (!existe_virgula)
-                        {
-                            int tam = textBox1.TextLength;
-                            string str = textBox1.Text;
-                            if ((tam == 1) && (str == "0"))
-                                completar_textbox("0,");
                             else
-                                completar_textbox(",");
-                            existe_virgula = true;
-                        }
-                    }
-                    break;
-                // - (Subtração)
-                case 45:
-                    if (textBox1.Text != "")
-                    {
-                        if (tipo_exib != 1)
-                        {
-                            switch (tipo_exib)
                             {
-                                case 2:
-                                    Converter_Base(16, 10);
-                                    break;
-                                case 3:
-                                    Converter_Base(8, 10);
-                                    break;
-                                case 4:
-                                    Converter_Base(2, 10);
-                                    break;
+                                num1 = float.Parse(textBox1.Text);
                             }
-                            num1 = float.Parse(resFinal);
-                        }
-                        else
-                        {
-                            num1 = float.Parse(textBox1.Text);
-                        }
 
-                        textBox1.Clear();
-                        textBox1.Focus();
-                        count = 2;
-                        existe_virgula = false;
-                        RB_Binario.Enabled = false;
-                        RB_Decimal.Enabled = false;
-                        RB_Hexadecimal.Enabled = false;
-                        RB_Octal.Enabled = false;
-                        group_box1.Focus();
-                    }
+                            textBox1.Clear();
+                            textBox1.Focus();
+                            count = 3;
+                            existe_virgula = false;
+                            RB_Binario.Enabled = false;
+                            RB_Decimal.Enabled = false;
+                            RB_Hexadecimal.Enabled = false;
+                            RB_Octal.Enabled = false;
+                            group_box1.Focus();
+                        }
                         break;
-                // Ponto (Vírgula)
-                case 46:
-                    if (botao_virgula.Enabled == true)
-                    {
-                        if (!existe_virgula)
+                    // + (Adição)
+                    case 43:
+                        if (textBox1.Text != "")
                         {
-                            int tam = textBox1.TextLength;
-                            string str = textBox1.Text;
-                            if ((tam == 1) && (str == "0"))
-                                completar_textbox("0,");
-                            else
-                                completar_textbox(",");
-                            existe_virgula = true;
-                        }
-                    }
-                    break;
-                // / (Divisão)
-                case 47:
-                    if (textBox1.Text != "")
-                    {
-                        if (tipo_exib != 1)
-                        {
-                            switch (tipo_exib)
+                            if (tipo_exib != 1)
                             {
-                                case 2:
-                                    Converter_Base(16, 10);
-                                    break;
-                                case 3:
-                                    Converter_Base(8, 10);
-                                    break;
-                                case 4:
-                                    Converter_Base(2, 10);
-                                    break;
+                                switch (tipo_exib)
+                                {
+                                    case 2:
+                                        Converter_Base(16, 10);
+                                        break;
+                                    case 3:
+                                        Converter_Base(8, 10);
+                                        break;
+                                    case 4:
+                                        Converter_Base(2, 10);
+                                        break;
+                                }
+                                num1 = float.Parse(resFinal);
                             }
-                            num1 = float.Parse(resFinal);
-                        }
-                        else
-                        {
-                            num1 = float.Parse(textBox1.Text);
-                        }
+                            else
+                            {
+                                num1 = float.Parse(textBox1.Text);
+                            }
 
-                        textBox1.Clear();
-                        textBox1.Focus();
-                        count = 4;
-                        existe_virgula = false;
-                        RB_Binario.Enabled = false;
-                        RB_Decimal.Enabled = false;
-                        RB_Hexadecimal.Enabled = false;
-                        RB_Octal.Enabled = false;
-                        group_box1.Focus();
-                    }
-                    break;
-                case 48:
-                    completar_textbox("0");
-                    break;
-                case 49:
-                    completar_textbox("1");
-                    break;
-                case 50:
-                    if (botao_2.Enabled==true)
-                    completar_textbox("2");
-                    break;
-                case 51:
-                    if (botao_3.Enabled==true)
-                    completar_textbox("3");
-                    break;
-                case 52:
-                    if (botao_4.Enabled==true)
-                    completar_textbox("4");
-                    break;
-                case 53:
-                    if (botao_5.Enabled==true)
-                    completar_textbox("5");
-                    break;
-                case 54:
-                    if (botao_6.Enabled==true)
-                    completar_textbox("6");
-                    break;
-                case 55:
-                    if (botao_7.Enabled==true)
-                    completar_textbox("7");
-                    break;
-                case 56:
-                    if (botao_8.Enabled==true)
-                    completar_textbox("8");
-                    break;
-                case 57:
-                    if (botao_9.Enabled==true)
-                    completar_textbox("9");
-                    break;
-                // = (igual)
-                case 61:
-                    calcular(count);
-                    RB_Decimal.Enabled = true;
-                    RB_Hexadecimal.Enabled = true;
-                    RB_Octal.Enabled = true;
-                    RB_Binario.Enabled = true;
-                    break;
-                // A
-                case 65:
-                    if (botao_A.Enabled == true)
-                    completar_textbox("A");
-                    break;
-                case 97:
-                    if (botao_A.Enabled == true)
-                        completar_textbox("A");
-                    break;
-                //B
-                case 66:
-                    if (botao_B.Enabled == true)
-                        completar_textbox("B");
-                    break;
-                case 98:
-                    if (botao_B.Enabled == true)
-                        completar_textbox("B");
-                    break;
-                //C
-                case 67:
-                    if (botao_C.Enabled==true)
-                        completar_textbox("C");
-                    break;
-                case 99:
-                    if (botao_C.Enabled == true)
-                        completar_textbox("C");
-                    break;
-                //D
-                case 68:
-                    if (botao_D.Enabled == true)
-                        completar_textbox("D");
-                    break;
-                case 100:
-                    if (botao_D.Enabled == true)
-                        completar_textbox("D");
-                    break;
-                //E
-                case 69:
-                    if (botao_E.Enabled == true)
-                        completar_textbox("E");
-                    break;
-                case 101:
-                    if (botao_E.Enabled == true)
-                        completar_textbox("E");
-                    break;
-                //F
-                case 70:
-                    if (botao_F.Enabled == true)
-                        completar_textbox("F");
-                    break;
-                case 102:
-                    if (botao_F.Enabled == true)
-                        completar_textbox("F");
-                    break;
+                            textBox1.Clear();
+                            textBox1.Focus();
+                            count = 1;
+                            existe_virgula = false;
+                            RB_Binario.Enabled = false;
+                            RB_Decimal.Enabled = false;
+                            RB_Hexadecimal.Enabled = false;
+                            RB_Octal.Enabled = false;
+                            group_box1.Focus();
+                        }
+                        break;
+                    // Vírgula
+                    case 44:
+                        if (botao_virgula.Enabled == true)
+                        {
+                            if (!existe_virgula)
+                            {
+                                int tam = textBox1.TextLength;
+                                string str = textBox1.Text;
+                                if ((tam == 1) && (str == "0"))
+                                    completar_textbox("0,");
+                                else
+                                    completar_textbox(",");
+                                existe_virgula = true;
+                            }
+                        }
+                        break;
+                    // - (Subtração)
+                    case 45:
+                        if (textBox1.Text != "")
+                        {
+                            if (tipo_exib != 1)
+                            {
+                                switch (tipo_exib)
+                                {
+                                    case 2:
+                                        Converter_Base(16, 10);
+                                        break;
+                                    case 3:
+                                        Converter_Base(8, 10);
+                                        break;
+                                    case 4:
+                                        Converter_Base(2, 10);
+                                        break;
+                                }
+                                num1 = float.Parse(resFinal);
+                            }
+                            else
+                            {
+                                num1 = float.Parse(textBox1.Text);
+                            }
+
+                            textBox1.Clear();
+                            textBox1.Focus();
+                            count = 2;
+                            existe_virgula = false;
+                            RB_Binario.Enabled = false;
+                            RB_Decimal.Enabled = false;
+                            RB_Hexadecimal.Enabled = false;
+                            RB_Octal.Enabled = false;
+                            group_box1.Focus();
+                        }
+                        break;
+                    // Ponto (Vírgula)
+                    case 46:
+                        if (botao_virgula.Enabled == true)
+                        {
+                            if (!existe_virgula)
+                            {
+                                int tam = textBox1.TextLength;
+                                string str = textBox1.Text;
+                                if ((tam == 1) && (str == "0"))
+                                    completar_textbox("0,");
+                                else
+                                    completar_textbox(",");
+                                existe_virgula = true;
+                            }
+                        }
+                        break;
+                    // / (Divisão)
+                    case 47:
+                        if (textBox1.Text != "")
+                        {
+                            if (tipo_exib != 1)
+                            {
+                                switch (tipo_exib)
+                                {
+                                    case 2:
+                                        Converter_Base(16, 10);
+                                        break;
+                                    case 3:
+                                        Converter_Base(8, 10);
+                                        break;
+                                    case 4:
+                                        Converter_Base(2, 10);
+                                        break;
+                                }
+                                num1 = float.Parse(resFinal);
+                            }
+                            else
+                            {
+                                num1 = float.Parse(textBox1.Text);
+                            }
+
+                            textBox1.Clear();
+                            textBox1.Focus();
+                            count = 4;
+                            existe_virgula = false;
+                            RB_Binario.Enabled = false;
+                            RB_Decimal.Enabled = false;
+                            RB_Hexadecimal.Enabled = false;
+                            RB_Octal.Enabled = false;
+                            group_box1.Focus();
+                        }
+                        break;
+                    case 48:
+                        completar_textbox("0");
+                        break;
+                    case 49:
+                        completar_textbox("1");
+                        break;
+                    case 50:
+                        if (botao_2.Enabled == true)
+                            completar_textbox("2");
+                        break;
+                    case 51:
+                        if (botao_3.Enabled == true)
+                            completar_textbox("3");
+                        break;
+                    case 52:
+                        if (botao_4.Enabled == true)
+                            completar_textbox("4");
+                        break;
+                    case 53:
+                        if (botao_5.Enabled == true)
+                            completar_textbox("5");
+                        break;
+                    case 54:
+                        if (botao_6.Enabled == true)
+                            completar_textbox("6");
+                        break;
+                    case 55:
+                        if (botao_7.Enabled == true)
+                            completar_textbox("7");
+                        break;
+                    case 56:
+                        if (botao_8.Enabled == true)
+                            completar_textbox("8");
+                        break;
+                    case 57:
+                        if (botao_9.Enabled == true)
+                            completar_textbox("9");
+                        break;
+                    // = (igual)
+                    case 61:
+                        calcular(count);
+                        RB_Decimal.Enabled = true;
+                        RB_Hexadecimal.Enabled = true;
+                        RB_Octal.Enabled = true;
+                        RB_Binario.Enabled = true;
+                        break;
+                    // A
+                    case 65:
+                        if (botao_A.Enabled == true)
+                            completar_textbox("A");
+                        break;
+                    case 97:
+                        if (botao_A.Enabled == true)
+                            completar_textbox("A");
+                        break;
+                    //B
+                    case 66:
+                        if (botao_B.Enabled == true)
+                            completar_textbox("B");
+                        break;
+                    case 98:
+                        if (botao_B.Enabled == true)
+                            completar_textbox("B");
+                        break;
+                    //C
+                    case 67:
+                        if (botao_C.Enabled == true)
+                            completar_textbox("C");
+                        break;
+                    case 99:
+                        if (botao_C.Enabled == true)
+                            completar_textbox("C");
+                        break;
+                    //D
+                    case 68:
+                        if (botao_D.Enabled == true)
+                            completar_textbox("D");
+                        break;
+                    case 100:
+                        if (botao_D.Enabled == true)
+                            completar_textbox("D");
+                        break;
+                    //E
+                    case 69:
+                        if (botao_E.Enabled == true)
+                            completar_textbox("E");
+                        break;
+                    case 101:
+                        if (botao_E.Enabled == true)
+                            completar_textbox("E");
+                        break;
+                    //F
+                    case 70:
+                        if (botao_F.Enabled == true)
+                            completar_textbox("F");
+                        break;
+                    case 102:
+                        if (botao_F.Enabled == true)
+                            completar_textbox("F");
+                        break;
+                }
             }
         }
 
@@ -643,7 +646,7 @@ namespace PixelCalc
             }
         }
 
-        public void calcular(int count)
+        private void calcular(int count)
         {
             if (textBox1.Text != "")
             {
@@ -783,10 +786,12 @@ namespace PixelCalc
                     botao_C.Visible = false;
                     botao_D.Visible = false;
                     botao_E.Visible = false;
+                    botao_E.Visible = false;
                     botao_A.Enabled = false;
                     botao_B.Enabled = false;
                     botao_C.Enabled = false;
                     botao_D.Enabled = false;
+                    botao_E.Enabled = false;
                     botao_E.Enabled = false;
                     Height = 255;  
                     break;
@@ -823,11 +828,13 @@ namespace PixelCalc
             botao_C.Visible = true;
             botao_D.Visible = true;
             botao_E.Visible = true;
+            botao_F.Visible = true;
             botao_A.Enabled = true;
             botao_B.Enabled = true;
             botao_C.Enabled = true;
             botao_D.Enabled = true;
             botao_E.Enabled = true;
+            botao_F.Enabled = true;
 
             switch (tipo_exib)
             {
@@ -877,11 +884,13 @@ namespace PixelCalc
                     botao_C.Visible = false;
                     botao_D.Visible = false;
                     botao_E.Visible = false;
+                    botao_F.Visible = false;
                     botao_A.Enabled = false;
                     botao_B.Enabled = false;
                     botao_C.Enabled = false;
                     botao_D.Enabled = false;
                     botao_E.Enabled = false;
+                    botao_F.Enabled = false;
                     Height = 255;
                     break;
                 //Base Binária
@@ -922,11 +931,13 @@ namespace PixelCalc
                     botao_C.Visible = false;
                     botao_D.Visible = false;
                     botao_E.Visible = false;
+                    botao_F.Visible = false;
                     botao_A.Enabled = false;
                     botao_B.Enabled = false;
                     botao_C.Enabled = false;
                     botao_D.Enabled = false;
                     botao_E.Enabled = false;
+                    botao_F.Enabled = false;
                     Height = 255;
                     break;
                 //Base Octal
@@ -951,9 +962,55 @@ namespace PixelCalc
             botao_9.Enabled = false;
         }
 
+        private void text_R1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int carac = Convert.ToInt16(e.KeyChar);
+
+            if ((Char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar)) || !(char.IsDigit(e.KeyChar)))
+                e.Handled = true;
+
+            /*if ((carac==8)||((carac>=48)&&(carac<=57)))
+            {
+                if (text_R1.Text != "")
+                {
+                    int num = Convert.ToInt16(text_R1.Text);
+                    if (num > 255)
+                        MessageBox.Show("RGB só suporta valores de 0 a 255");
+                    else if (num < 0)
+                        MessageBox.Show("Valores negativos não permitidos");
+                }
+                else
+                {
+                    text_R1.Text = "0";
+                }
+            }
+            else
+            {
+                if (text_R1.Text != "")
+                {
+                    text_R1.Select(text_R1.Text.Length, 0);
+                    text_R1.Text = text_R1.Text.Remove(text_R1.TextLength - 1);
+                }
+                else
+                {
+                    text_R1.Text = "0";
+                }
+            }*/
+        }
+
         private void botao_cor_Click(object sender, EventArgs e)
         {
-
+            if (cor_ativ==0)//Desativado
+            {
+                cor_ativ = 1;
+                Width = 650;
+                //pictureBox1.BackColor = Color.FromArgb(255, 255, 0);
+            }
+            else//Ativado
+            {
+                cor_ativ = 0;
+                Width = 380;
+            }
         }
 
         private void Converter_Base(int baseorigem, int basedestino)
