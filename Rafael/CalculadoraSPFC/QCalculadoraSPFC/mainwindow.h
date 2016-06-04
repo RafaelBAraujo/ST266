@@ -34,6 +34,12 @@ private slots:
     void on_Num9_clicked();
 
     void on_OPplus_clicked();
+    void on_OPminus_clicked();
+    void on_OPtimes_clicked();
+    void on_OPdiv_clicked();
+
+    void on_OPexp_clicked();
+    void on_OPsqrt_clicked();
 
     void on_ClearButton_clicked();
 
