@@ -382,13 +382,13 @@ void MainWindow::on_ClearButton_clicked()
 {
     ui->lineEdit->clear();
     Values.clear();
-    Values.append(0);
+    //Values.append(0);
     ResultShown = false;
 }
 
 void MainWindow::on_EqualsButton_clicked()
 {
-    double x;
+    /*double x;
     x = Values.first();
     Values.clear();
 
@@ -425,7 +425,131 @@ void MainWindow::on_EqualsButton_clicked()
     //QMessageBox::information(this, "c", s);
     ui->lineEdit->setText(s);
     Values.clear();
-    ResultShown = true;
+    ResultShown = true;*/
+
+    int MainWindow::on_EqualsButton_clicked()
+    {
+        Decimal = false;
+        double x = 0;
+
+            if(ResultShown == true)
+            {
+                /*x = ui->lineEdit->text().toDouble();
+                if(lastOPused == operand::sum)
+                {
+                    x += x;
+                    QString s = QString::number(x);
+                    ui->lineEdit->setText(s);
+                }
+                else if(lastOPused == operand::divs)
+                {
+                    x /= x;
+                    QString s = QString::number(x);
+                    ui->lineEdit->setText(s);
+                }
+                else if(lastOPused == operand::min)
+                {
+                    x -= x;
+                    QString s = QString::number(x);
+                    ui->lineEdit->setText(s);
+                }
+                else if(lastOPused == operand::mult)
+                {
+                    x *= x;
+                    QString s = QString::number(x);
+                    ui->lineEdit->setText(s);
+                }
+                break;*/
+
+            }
+           else if(lastOPused == operand::none){
+
+                Values.clear();
+                ResultShown;
+                ui->lineEdit->setText("0");
+
+            }
+            else if(lastOPused == operand::sum)
+            {
+                x = Values.first();
+                Values.clear();
+                 x += ui->lineEdit->text().toDouble();
+                 Values.append(x);
+                 ui->lineEdit->clear();
+                 QString s = QString::number(x);
+                 //QMessageBox::information(this, "c", s);
+                 ui->lineEdit->setText(s);
+                 Values.clear();
+                 ResultShown = true;
+            }
+            else if(lastOPused == operand::min)
+            {
+                x = Values.first();
+                Values.clear();
+                x -= ui->lineEdit->text().toDouble();
+                Values.append(x);
+                ui->lineEdit->clear();
+                QString s = QString::number(x);
+                //QMessageBox::information(this, "c", s);
+                ui->lineEdit->setText(s);
+                Values.clear();
+                ResultShown = true;
+            }
+            else if(lastOPused == operand::divs)
+            {
+                x = Values.first();
+                Values.clear();
+                x /= ui->lineEdit->text().toDouble();
+                Values.append(x);
+                ui->lineEdit->clear();
+                QString s = QString::number(x);
+                //QMessageBox::information(this, "c", s);
+                ui->lineEdit->setText(s);
+                Values.clear();
+                ResultShown = true;
+            }
+            else if(lastOPused == operand::mult)
+            {
+                x = Values.first();
+                Values.clear();
+                x *= ui->lineEdit->text().toDouble();
+                Values.append(x);
+                ui->lineEdit->clear();
+                QString s = QString::number(x);
+                //QMessageBox::information(this, "c", s);
+                ui->lineEdit->setText(s);
+                Values.clear();
+                ResultShown = true;
+            }
+            else if(lastOPused == operand::expo)
+            {
+                x = Values.first();
+                Values.clear();
+                x = qPow(ui->lineEdit->text().toDouble(), 2);
+                Values.append(x);
+                ui->lineEdit->clear();
+                QString s = QString::number(x);
+                //QMessageBox::information(this, "c", s);
+                ui->lineEdit->setText(s);
+                Values.clear();
+                ResultShown = true;
+            }
+            else if(lastOPused == operand::square)
+            {
+                x = Values.first();
+                Values.clear();
+                x = qSqrt(ui->lineEdit->text().toDouble());
+                Values.append(x);
+                ui->lineEdit->clear();
+                QString s = QString::number(x);
+                //QMessageBox::information(this, "c", s);
+                ui->lineEdit->setText(s);
+                Values.clear();
+                ResultShown = true;
+            }
+
+        return 0;
+    }
 }
 
 void MainWindow::on_CButton_clicked()
