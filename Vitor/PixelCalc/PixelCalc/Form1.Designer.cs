@@ -61,8 +61,8 @@
             this.botao_E = new System.Windows.Forms.Button();
             this.botao_F = new System.Windows.Forms.Button();
             this.group_box2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botao_SubtrairCor = new System.Windows.Forms.Button();
+            this.botao_SomarCor = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -467,8 +467,8 @@
             // 
             // group_box2
             // 
-            this.group_box2.Controls.Add(this.button2);
-            this.group_box2.Controls.Add(this.button1);
+            this.group_box2.Controls.Add(this.botao_SubtrairCor);
+            this.group_box2.Controls.Add(this.botao_SomarCor);
             this.group_box2.Controls.Add(this.label7);
             this.group_box2.Controls.Add(this.label6);
             this.group_box2.Controls.Add(this.label5);
@@ -483,29 +483,31 @@
             this.group_box2.Controls.Add(this.text_R1);
             this.group_box2.Controls.Add(this.label1);
             this.group_box2.Controls.Add(this.pictureBox1);
-            this.group_box2.Location = new System.Drawing.Point(385, 12);
+            this.group_box2.Location = new System.Drawing.Point(384, 9);
             this.group_box2.Name = "group_box2";
             this.group_box2.Size = new System.Drawing.Size(236, 195);
             this.group_box2.TabIndex = 22;
             this.group_box2.TabStop = false;
             // 
-            // button2
+            // botao_SubtrairCor
             // 
-            this.button2.Location = new System.Drawing.Point(6, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Subtrair";
-            this.button2.UseVisualStyleBackColor = true;
+            this.botao_SubtrairCor.Location = new System.Drawing.Point(6, 159);
+            this.botao_SubtrairCor.Name = "botao_SubtrairCor";
+            this.botao_SubtrairCor.Size = new System.Drawing.Size(75, 23);
+            this.botao_SubtrairCor.TabIndex = 14;
+            this.botao_SubtrairCor.Text = "Subtrair";
+            this.botao_SubtrairCor.UseVisualStyleBackColor = true;
+            this.botao_SubtrairCor.Click += new System.EventHandler(this.botao_SubtrairCor_Click);
             // 
-            // button1
+            // botao_SomarCor
             // 
-            this.button1.Location = new System.Drawing.Point(6, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Somar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.botao_SomarCor.Location = new System.Drawing.Point(6, 130);
+            this.botao_SomarCor.Name = "botao_SomarCor";
+            this.botao_SomarCor.Size = new System.Drawing.Size(75, 23);
+            this.botao_SomarCor.TabIndex = 13;
+            this.botao_SomarCor.Text = "Somar";
+            this.botao_SomarCor.UseVisualStyleBackColor = true;
+            this.botao_SomarCor.Click += new System.EventHandler(this.botao_SomarCor_Click);
             // 
             // label7
             // 
@@ -569,6 +571,7 @@
             this.text_B2.TabIndex = 6;
             this.text_B2.Text = "0";
             this.text_B2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_B2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_B2_KeyPress);
             // 
             // text_G2
             // 
@@ -578,6 +581,7 @@
             this.text_G2.TabIndex = 5;
             this.text_G2.Text = "0";
             this.text_G2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_G2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_G2_KeyPress);
             // 
             // text_R2
             // 
@@ -587,6 +591,7 @@
             this.text_R2.TabIndex = 4;
             this.text_R2.Text = "0";
             this.text_R2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_R2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_R2_KeyPress);
             // 
             // text_B1
             // 
@@ -596,6 +601,7 @@
             this.text_B1.TabIndex = 3;
             this.text_B1.Text = "0";
             this.text_B1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_B1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_B1_KeyPress);
             // 
             // text_G1
             // 
@@ -605,6 +611,7 @@
             this.text_G1.TabIndex = 2;
             this.text_G1.Text = "0";
             this.text_G1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_G1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_G1_KeyPress);
             // 
             // text_R1
             // 
@@ -638,7 +645,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 264);
+            this.ClientSize = new System.Drawing.Size(364, 216);
             this.Controls.Add(this.group_box2);
             this.Controls.Add(this.botao_F);
             this.Controls.Add(this.botao_E);
@@ -725,8 +732,8 @@
         private System.Windows.Forms.TextBox text_G1;
         private System.Windows.Forms.TextBox text_R1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botao_SubtrairCor;
+        private System.Windows.Forms.Button botao_SomarCor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

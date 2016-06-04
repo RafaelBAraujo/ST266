@@ -964,38 +964,86 @@ namespace PixelCalc
 
         private void text_R1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int carac = Convert.ToInt16(e.KeyChar);
-
-            if ((Char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar)) || !(char.IsDigit(e.KeyChar)))
+            if (((char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
                 e.Handled = true;
+        }
 
-            /*if ((carac==8)||((carac>=48)&&(carac<=57)))
+        private void text_G1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
+                e.Handled = true;
+        }
+
+        private void text_B1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
+                e.Handled = true;
+        }
+
+        private void text_R2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
+                e.Handled = true;
+        }
+
+        private void text_G2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
+                e.Handled = true;
+        }
+
+        private void text_B2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((char.IsLetter(e.KeyChar)) || (char.IsWhiteSpace(e.KeyChar))) && (e.KeyChar != (char)Keys.Back))
+                e.Handled = true;
+        }
+
+        private void botao_SomarCor_Click(object sender, EventArgs e)
+        {
+            if ((Convert.ToInt16(text_R1.Text) > 255) || (Convert.ToInt16(text_R2.Text) > 255) || (Convert.ToInt16(text_G1.Text) > 255) || (Convert.ToInt16(text_G2.Text) > 255) || (Convert.ToInt16(text_B1.Text) > 255) || (Convert.ToInt16(text_B2.Text) > 255))
             {
-                if (text_R1.Text != "")
-                {
-                    int num = Convert.ToInt16(text_R1.Text);
-                    if (num > 255)
-                        MessageBox.Show("RGB só suporta valores de 0 a 255");
-                    else if (num < 0)
-                        MessageBox.Show("Valores negativos não permitidos");
-                }
-                else
-                {
-                    text_R1.Text = "0";
-                }
+                MessageBox.Show("Digite valor(es) menor(es) que 255");
+            }
+            else if ((Convert.ToInt16(text_R1.Text) < 0) || (Convert.ToInt16(text_R2.Text) < 0) || (Convert.ToInt16(text_G1.Text) < 0) || (Convert.ToInt16(text_G2.Text) < 0) || (Convert.ToInt16(text_B1.Text) < 0) || (Convert.ToInt16(text_B2.Text) < 0))
+            {
+                MessageBox.Show("Digite valor(es) positivo(s)");
             }
             else
             {
-                if (text_R1.Text != "")
-                {
-                    text_R1.Select(text_R1.Text.Length, 0);
-                    text_R1.Text = text_R1.Text.Remove(text_R1.TextLength - 1);
-                }
-                else
-                {
-                    text_R1.Text = "0";
-                }
-            }*/
+                int R = Convert.ToInt16(text_R1.Text) + Convert.ToInt16(text_R2.Text);
+                int G = Convert.ToInt16(text_G1.Text) + Convert.ToInt16(text_G2.Text);
+                int B = Convert.ToInt16(text_B1.Text) + Convert.ToInt16(text_B2.Text);
+
+                if (R > 255)R = 255;
+                if (G > 255) G = 255;
+                if (B > 255) B = 255;
+
+                pictureBox1.BackColor = Color.FromArgb(R,G,B);
+            }
+        }
+
+        private void botao_SubtrairCor_Click(object sender, EventArgs e)
+        {
+            if ((Convert.ToInt16(text_R1.Text) > 255) || (Convert.ToInt16(text_R2.Text) > 255) || (Convert.ToInt16(text_G1.Text) > 255) || (Convert.ToInt16(text_G2.Text) > 255) || (Convert.ToInt16(text_B1.Text) > 255) || (Convert.ToInt16(text_B2.Text) > 255))
+            {
+                MessageBox.Show("Digite valor(es) menor(es) que 255");
+            }
+            else if ((Convert.ToInt16(text_R1.Text) < 0) || (Convert.ToInt16(text_R2.Text) < 0) || (Convert.ToInt16(text_G1.Text) < 0) || (Convert.ToInt16(text_G2.Text) < 0) || (Convert.ToInt16(text_B1.Text) < 0) || (Convert.ToInt16(text_B2.Text) < 0))
+            {
+                MessageBox.Show("Digite valor(es) positivo(s)");
+            }
+            else
+            {
+                int R = Convert.ToInt16(text_R1.Text) - Convert.ToInt16(text_R2.Text);
+                int G = Convert.ToInt16(text_G1.Text) - Convert.ToInt16(text_G2.Text);
+                int B = Convert.ToInt16(text_B1.Text) - Convert.ToInt16(text_B2.Text);
+
+                if (R < 0) R = 0;
+                if (G < 0) G = 0;
+                if (B < 0) B = 0;
+
+                pictureBox1.BackColor = Color.FromArgb(R, G, B);
+            }
         }
 
         private void botao_cor_Click(object sender, EventArgs e)
@@ -1004,12 +1052,18 @@ namespace PixelCalc
             {
                 cor_ativ = 1;
                 Width = 650;
-                //pictureBox1.BackColor = Color.FromArgb(255, 255, 0);
             }
             else//Ativado
             {
                 cor_ativ = 0;
                 Width = 380;
+                text_R1.Text = "0";
+                text_R2.Text = "0";
+                text_G1.Text = "0";
+                text_G2.Text = "0";
+                text_B1.Text = "0";
+                text_B2.Text = "0";
+                pictureBox1.BackColor = Color.FromArgb(255, 255, 255);
             }
         }
 
