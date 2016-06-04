@@ -571,6 +571,7 @@
             this.text_B2.TabIndex = 6;
             this.text_B2.Text = "0";
             this.text_B2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_B2.TextChanged += new System.EventHandler(this.text_B2_TextChanged);
             this.text_B2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_B2_KeyPress);
             // 
             // text_G2
@@ -581,6 +582,7 @@
             this.text_G2.TabIndex = 5;
             this.text_G2.Text = "0";
             this.text_G2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_G2.TextChanged += new System.EventHandler(this.text_G2_TextChanged);
             this.text_G2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_G2_KeyPress);
             // 
             // text_R2
@@ -591,6 +593,7 @@
             this.text_R2.TabIndex = 4;
             this.text_R2.Text = "0";
             this.text_R2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_R2.TextChanged += new System.EventHandler(this.text_R2_TextChanged);
             this.text_R2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_R2_KeyPress);
             // 
             // text_B1
@@ -601,6 +604,7 @@
             this.text_B1.TabIndex = 3;
             this.text_B1.Text = "0";
             this.text_B1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_B1.TextChanged += new System.EventHandler(this.text_B1_TextChanged);
             this.text_B1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_B1_KeyPress);
             // 
             // text_G1
@@ -611,6 +615,7 @@
             this.text_G1.TabIndex = 2;
             this.text_G1.Text = "0";
             this.text_G1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_G1.TextChanged += new System.EventHandler(this.text_G1_TextChanged);
             this.text_G1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_G1_KeyPress);
             // 
             // text_R1
@@ -621,6 +626,7 @@
             this.text_R1.TabIndex = 1;
             this.text_R1.Text = "0";
             this.text_R1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.text_R1.TextChanged += new System.EventHandler(this.text_R1_TextChanged);
             this.text_R1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_R1_KeyPress);
             // 
             // label1

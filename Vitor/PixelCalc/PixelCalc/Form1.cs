@@ -1046,6 +1046,42 @@ namespace PixelCalc
             }
         }
 
+        private void text_R1_TextChanged(object sender, EventArgs e)
+        {
+            if (text_R1.Text == "")
+                text_R1.Text = "0";
+        }
+
+        private void text_G1_TextChanged(object sender, EventArgs e)
+        {
+            if (text_G1.Text == "")
+                text_G1.Text = "0";
+        }
+
+        private void text_B1_TextChanged(object sender, EventArgs e)
+        {
+            if (text_B1.Text == "")
+                text_B1.Text = "0";
+        }
+
+        private void text_R2_TextChanged(object sender, EventArgs e)
+        {
+            if (text_R2.Text == "")
+                text_R2.Text = "0";
+        }
+
+        private void text_G2_TextChanged(object sender, EventArgs e)
+        {
+            if (text_G2.Text == "")
+                text_G2.Text = "0";
+        }
+
+        private void text_B2_TextChanged(object sender, EventArgs e)
+        {
+            if (text_B2.Text == "")
+                text_B2.Text = "0";
+        }
+
         private void botao_cor_Click(object sender, EventArgs e)
         {
             if (cor_ativ==0)//Desativado
