@@ -272,12 +272,13 @@ void MainWindow::on_OPminus_clicked() {
 
     lastOPused = min;
     if(ui->lineEdit->text().isEmpty())
+    {
         if(Values.isEmpty())
         {
             Values.append(0);
             ui->lineEdit->clear();
         }
-
+    }
     if(!ui->lineEdit->text().isEmpty())
     {
         if(Values.isEmpty())
