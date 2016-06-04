@@ -382,6 +382,7 @@ void MainWindow::on_ClearButton_clicked()
 {
     ui->lineEdit->clear();
     Values.clear();
+    Values.append(0);
     ResultShown = false;
 }
 
