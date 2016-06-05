@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>374</width>
-    <height>240</height>
+    <height>241</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -188,7 +188,7 @@
      <rect>
       <x>82</x>
       <y>193</y>
-      <width>193</width>
+      <width>136</width>
       <height>21</height>
      </rect>
     </property>
@@ -1003,6 +1003,19 @@
     </property>
     <property name="text">
      <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SignButton">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>193</y>
+      <width>50</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>p</string>
     </property>
    </widget>
   </widget>

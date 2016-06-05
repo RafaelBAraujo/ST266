@@ -10,13 +10,14 @@
 
 //#include "about.h"
 
-enum operand{ sum, min, mult, divs, square, expo };
+enum operand{ sum, min, mult, divs, square, expo, none };
 
 //---- GLOBALS ------
 
 QList<double> Values;
 static bool ResultShown = false;
 operand lastOPused = sum;
+static bool Decimal = false;
 //- - - - - - - - - -
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -41,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->OPminus->setStyleSheet("background-color:white");
     ui->OPtimes->setStyleSheet("background-color:white");
     ui->OPdiv->setStyleSheet("background-color:white");
+    ui->SignButton->setStyleSheet("background-color:white");
     ui->OPsqrt->setStyleSheet("background-color:black");
     ui->OPexp->setStyleSheet("background-color:black");
 
@@ -428,8 +430,6 @@ void MainWindow::on_EqualsButton_clicked()
     Values.clear();
     ResultShown = true;*/
 
-    int MainWindow::on_EqualsButton_clicked()
-    {
         Decimal = false;
         double x = 0;
 
@@ -549,8 +549,6 @@ void MainWindow::on_EqualsButton_clicked()
                 ResultShown = true;
             }
 
-        return 0;
-    }
 }
 
 void MainWindow::on_CButton_clicked()
