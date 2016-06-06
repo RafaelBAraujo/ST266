@@ -555,3 +555,14 @@ void MainWindow::on_CButton_clicked()
 {
     ui->lineEdit->clear();
 }
+
+void MainWindow::on_SignButton_clicked()
+{
+    double x;
+    x = ui->lineEdit->text().toDouble();
+    x = x * (-1);
+    ui->lineEdit->clear();
+    QString s = QString::number(x);
+    ui->lineEdit->setText(s);
+
+}

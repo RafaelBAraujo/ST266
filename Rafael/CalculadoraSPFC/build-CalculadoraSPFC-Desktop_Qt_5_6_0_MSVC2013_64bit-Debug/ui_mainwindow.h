@@ -256,6 +256,7 @@ public:
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(SignButton, SIGNAL(clicked()), lineEdit, SLOT(update()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
