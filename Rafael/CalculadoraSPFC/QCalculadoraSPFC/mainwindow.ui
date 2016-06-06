@@ -1015,7 +1015,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>p</string>
+     <string>±</string>
     </property>
    </widget>
   </widget>

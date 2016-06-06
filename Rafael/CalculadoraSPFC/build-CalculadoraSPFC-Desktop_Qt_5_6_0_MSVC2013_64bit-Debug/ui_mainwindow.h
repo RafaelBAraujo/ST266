@@ -284,7 +284,7 @@ public:
         Num3->setText(QApplication::translate("MainWindow", "3", 0));
         Num2->setText(QApplication::translate("MainWindow", "2", 0));
         Num1->setText(QApplication::translate("MainWindow", "1", 0));
-        SignButton->setText(QApplication::translate("MainWindow", "p", 0));
+        SignButton->setText(QApplication::translate("MainWindow", "\302\261", 0));
     } // retranslateUi
 
 };
