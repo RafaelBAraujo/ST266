@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>374</width>
-    <height>240</height>
+    <height>241</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -188,7 +188,7 @@
      <rect>
       <x>82</x>
       <y>193</y>
-      <width>193</width>
+      <width>136</width>
       <height>21</height>
      </rect>
     </property>
@@ -1005,6 +1005,19 @@
      <string>1</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="SignButton">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>193</y>
+      <width>50</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>±</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -1027,5 +1040,22 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>SignButton</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

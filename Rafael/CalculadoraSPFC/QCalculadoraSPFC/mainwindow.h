@@ -47,6 +47,8 @@ private slots:
 
     void on_CButton_clicked();
 
+    void on_SignButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

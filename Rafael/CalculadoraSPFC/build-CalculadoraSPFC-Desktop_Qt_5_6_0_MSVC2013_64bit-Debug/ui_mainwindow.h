@@ -49,6 +49,7 @@ public:
     QPushButton *Num3;
     QPushButton *Num2;
     QPushButton *Num1;
+    QPushButton *SignButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
 
@@ -57,7 +58,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->setEnabled(true);
-        MainWindow->resize(374, 240);
+        MainWindow->resize(374, 241);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -104,7 +105,7 @@ public:
         ClearButton->setPalette(palette1);
         EqualsButton = new QPushButton(centralWidget);
         EqualsButton->setObjectName(QStringLiteral("EqualsButton"));
-        EqualsButton->setGeometry(QRect(82, 193, 193, 21));
+        EqualsButton->setGeometry(QRect(82, 193, 136, 21));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -242,6 +243,9 @@ public:
         palette16.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
         palette16.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
         Num1->setPalette(palette16);
+        SignButton = new QPushButton(centralWidget);
+        SignButton->setObjectName(QStringLiteral("SignButton"));
+        SignButton->setGeometry(QRect(225, 193, 50, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -252,6 +256,7 @@ public:
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
 
         retranslateUi(MainWindow);
+        QObject::connect(SignButton, SIGNAL(clicked()), lineEdit, SLOT(update()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -280,6 +285,7 @@ public:
         Num3->setText(QApplication::translate("MainWindow", "3", 0));
         Num2->setText(QApplication::translate("MainWindow", "2", 0));
         Num1->setText(QApplication::translate("MainWindow", "1", 0));
+        SignButton->setText(QApplication::translate("MainWindow", "\302\261", 0));
     } // retranslateUi
 
 };
