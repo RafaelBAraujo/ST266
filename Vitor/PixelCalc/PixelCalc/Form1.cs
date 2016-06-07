@@ -15,14 +15,13 @@ namespace PixelCalc
         int count,cor_ativ=0;       
         int tipo_exib=1; //padrão é Decimal
                          // 1-Decimal 2-Hexa 3-Octal 4-Binário
+        int check = 1;//variável auxiliar ao método do botao +-
         float num1 = 0.0F, resp = 0.0F;
         string resFinal;
 
         private void completar_textbox(string n)
         {
-            int tam = textBox1.TextLength;
-            string str = textBox1.Text;
-            if ((tam==1)&&(str=="0"))
+            if ((textBox1.TextLength==1)&&(textBox1.Text=="0"))
                 textBox1.Text = "";
 
             textBox1.Text = textBox1.Text + n;
@@ -110,9 +109,24 @@ namespace PixelCalc
 
         private void botao_limpar_Click(object sender, EventArgs e)
         {
+            check = 1;
             count = 0;
             textBox1.Text = "0";
             existe_virgula = false;
+            RB_Binario.Enabled = true;
+            RB_Decimal.Enabled = true;
+            RB_Hexadecimal.Enabled = true;
+            RB_Octal.Enabled = true;
+            if (cor_ativ==1)
+            {
+                text_R1.Text = "0";
+                text_R2.Text = "0";
+                text_G1.Text = "0";
+                text_G2.Text = "0";
+                text_B1.Text = "0";
+                text_B2.Text = "0";
+                pictureBox1.BackColor = Color.FromArgb(255,255,255);
+            }
         }
 
         private void botao_apagar_Click(object sender, EventArgs e)
@@ -289,6 +303,7 @@ namespace PixelCalc
                             RB_Octal.Enabled = false;
                             group_box1.Focus();
                         }
+
                         break;
                     // Ponto (Vírgula)
                     case 46:
@@ -615,8 +630,6 @@ namespace PixelCalc
             RB_Octal.Enabled = true;
         }
 
-        int check = 1;//variável auxiliar ao método do botao +-
-
         private void botao_maisoumenos_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "0")
@@ -629,10 +642,11 @@ namespace PixelCalc
                         textBox1.Text = "-" + textBox1.Text;
                         check = 2;
                     }
-                    else if (check == 2)
+                    else
                     {
-                        int lenght = textBox1.TextLength; textBox1.Clear();
-                        for (int i = 1; i < lenght; i++)
+                        int lenght = textBox1.TextLength;
+                        textBox1.Clear();
+                        for (int i = 0; i < lenght; i++)
                         {
                             textBox1.Text = textBox1.Text + text[i];
                         }
@@ -690,22 +704,49 @@ namespace PixelCalc
                         {
                             Converter_Base(16, 10);
                             resp = num1 - float.Parse(resFinal);
-                            textBox1.Text = resp.ToString();
-                            Converter_Base(10, 16);
+                            if (resp > 0)
+                            {
+                                textBox1.Text = resp.ToString();
+                                Converter_Base(10, 16);
+                            }
+                            else
+                            {
+                                textBox1.Text = "";
+                                RB_Decimal.Checked = true;
+                                textBox1.Text = resp.ToString();
+                            }
                         }
                         else if (tipo_exib == 3)
                         {
                             Converter_Base(8, 10);
                             resp = num1 - float.Parse(resFinal);
-                            textBox1.Text = resp.ToString();
-                            Converter_Base(10, 8);
+                            if (resp>0)
+                            {
+                                textBox1.Text = resp.ToString();
+                                Converter_Base(10, 8);
+                            }
+                            else
+                            {
+                                textBox1.Text = "";
+                                RB_Decimal.Checked = true;
+                                textBox1.Text = resp.ToString();
+                            }                            
                         }
                         else if (tipo_exib == 4)
                         {
                             Converter_Base(2, 10);
                             resp = num1 - float.Parse(resFinal);
-                            textBox1.Text = resp.ToString();
-                            Converter_Base(10, 2);
+                            if (resp>0)
+                            {
+                                textBox1.Text = resp.ToString();
+                                Converter_Base(10, 2);
+                            }
+                            else
+                            {
+                                textBox1.Text = "";
+                                RB_Decimal.Checked = true;
+                                textBox1.Text = resp.ToString();
+                            }
                         }
                         break;
                         case 3:
@@ -840,6 +881,11 @@ namespace PixelCalc
             {
                 //Base Decimal
                 case 1:
+                    if (Convert.ToInt16(textBox1.Text) < 0)
+                    {
+                        textBox1.Text = (Convert.ToInt16(textBox1.Text) * -1).ToString();
+                        check = 1;
+                    }
                     Converter_Base(10,16);
                     break;
                 //Base Octal
@@ -874,6 +920,11 @@ namespace PixelCalc
             {
                 //Base Decimal
                 case 1:
+                    if (Convert.ToInt16(textBox1.Text) < 0)
+                    {
+                        textBox1.Text = (Convert.ToInt16(textBox1.Text) * -1).ToString();
+                        check = 1;
+                    }
                     Converter_Base(10, 8);
                     break;
                 //Base HexaDecimal
@@ -921,6 +972,11 @@ namespace PixelCalc
             {
                 //Base Decimal
                 case 1:
+                    if (Convert.ToInt16(textBox1.Text) < 0)
+                    {
+                        textBox1.Text = (Convert.ToInt16(textBox1.Text) * -1).ToString();
+                        check = 1;
+                    }
                     Converter_Base(10, 2);
                     break;
                 //Base HexaDecimal
@@ -1195,7 +1251,7 @@ namespace PixelCalc
             //se os caracteres digitados NÃO pertencerem a base informada, mostrar mensagem de erro
             else
             {
-                MessageBox.Show("O número digitado possui caracteres além da base de origem informada: " + baseValida, "Base inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               // MessageBox.Show("O número digitado possui caracteres além da base de origem informada: " + baseValida, "Base inválida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

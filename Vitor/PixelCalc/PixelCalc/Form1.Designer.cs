@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.botao_1 = new System.Windows.Forms.Button();
             this.botao_2 = new System.Windows.Forms.Button();
             this.botao_3 = new System.Windows.Forms.Button();
@@ -337,6 +338,7 @@
             // 
             // group_box1
             // 
+            this.group_box1.BackColor = System.Drawing.SystemColors.Control;
             this.group_box1.Controls.Add(this.RB_Binario);
             this.group_box1.Controls.Add(this.RB_Octal);
             this.group_box1.Controls.Add(this.RB_Hexadecimal);
@@ -467,6 +469,7 @@
             // 
             // group_box2
             // 
+            this.group_box2.BackColor = System.Drawing.SystemColors.Control;
             this.group_box2.Controls.Add(this.botao_SubtrairCor);
             this.group_box2.Controls.Add(this.botao_SomarCor);
             this.group_box2.Controls.Add(this.label7);
@@ -641,6 +644,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(98, 132);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 50);
@@ -651,7 +655,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 216);
+            this.ClientSize = new System.Drawing.Size(658, 216);
             this.Controls.Add(this.group_box2);
             this.Controls.Add(this.botao_F);
             this.Controls.Add(this.botao_E);
@@ -682,6 +686,7 @@
             this.Controls.Add(this.botao_2);
             this.Controls.Add(this.botao_1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
