@@ -1548,6 +1548,14 @@ release\mainwindow.obj: ..\QCalculadoraSPFC\mainwindow.cpp ../QCalculadoraSPFC/m
 		C:\Qt\5.6\msvc2013_64\include\QtWidgets\qtoolbutton.h \
 		C:\Qt\5.6\msvc2013_64\include\QtWidgets\qtwidgetsversion.h \
 		ui_mainwindow.h \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QAction \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QApplication \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QButtonGroup \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QHeaderView \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QLineEdit \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QMenuBar \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QPushButton \
+		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QToolBar \
 		C:\Qt\5.6\msvc2013_64\include\QtCore\QDebug \
 		C:\Qt\5.6\msvc2013_64\include\QtGui\QIcon
 

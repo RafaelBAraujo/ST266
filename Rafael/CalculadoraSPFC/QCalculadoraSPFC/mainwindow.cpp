@@ -203,6 +203,7 @@ void MainWindow::on_OPplus_clicked()
         {
             Values.append(0);
             ui->lineEdit->clear();
+            Decimal = false;
         }
 
     if(!ui->lineEdit->text().isEmpty())
@@ -211,6 +212,7 @@ void MainWindow::on_OPplus_clicked()
         {
             Values.append(ui->lineEdit->text().toDouble());
             ui->lineEdit->clear();
+            Decimal = false;
         }
         else if(!Values.isEmpty())
         {
@@ -224,12 +226,15 @@ void MainWindow::on_OPplus_clicked()
             //QMessageBox::information(this, "c", s);
             ui->lineEdit->setText(s);
             ResultShown = true;
+            Decimal = false;
         }
     }
 
 
-    else
+    else{
         Values.append(ui->lineEdit->text().toDouble());
+        Decimal = false;
+    }
 }
 
 void MainWindow::on_OPtimes_clicked()
@@ -241,6 +246,7 @@ void MainWindow::on_OPtimes_clicked()
         {
             Values.append(0);
             ui->lineEdit->clear();
+            Decimal = false;
         }
 
     if(!ui->lineEdit->text().isEmpty())
@@ -249,6 +255,7 @@ void MainWindow::on_OPtimes_clicked()
         {
             Values.append(ui->lineEdit->text().toDouble());
             ui->lineEdit->clear();
+            Decimal = false;
         }
         else if(!Values.isEmpty())
         {
@@ -262,12 +269,15 @@ void MainWindow::on_OPtimes_clicked()
             //QMessageBox::information(this, "c", s);
             ui->lineEdit->setText(s);
             ResultShown = true;
+            Decimal = false;
         }
     }
 
 
-    else
+    else{
         Values.append(ui->lineEdit->text().toDouble());
+        Decimal = false;
+    }
 }
 
 void MainWindow::on_OPminus_clicked() {
@@ -279,6 +289,7 @@ void MainWindow::on_OPminus_clicked() {
         {
             Values.append(0);
             ui->lineEdit->clear();
+            Decimal = false;
         }
     }
     if(!ui->lineEdit->text().isEmpty())
@@ -287,6 +298,7 @@ void MainWindow::on_OPminus_clicked() {
         {
             Values.append(ui->lineEdit->text().toDouble());
             ui->lineEdit->clear();
+            Decimal = false;
         }
         else if(!Values.isEmpty())
         {
@@ -300,12 +312,14 @@ void MainWindow::on_OPminus_clicked() {
             //QMessageBox::information(this, "c", s);
             ui->lineEdit->setText(s);
             ResultShown = true;
+            Decimal = false;
         }
     }
 
-
-    else
+    else{
         Values.append(ui->lineEdit->text().toDouble());
+        Decimal = false;
+    }
 }
 void MainWindow::on_OPdiv_clicked() {
 
@@ -315,6 +329,7 @@ void MainWindow::on_OPdiv_clicked() {
         {
             Values.append(0);
             ui->lineEdit->clear();
+            Decimal = false;
         }
 
     if(!ui->lineEdit->text().isEmpty())
@@ -323,6 +338,7 @@ void MainWindow::on_OPdiv_clicked() {
         {
             Values.append(ui->lineEdit->text().toDouble());
             ui->lineEdit->clear();
+            Decimal = false;
         }
         else if(!Values.isEmpty())
         {
@@ -336,6 +352,7 @@ void MainWindow::on_OPdiv_clicked() {
             //QMessageBox::information(this, "c", s);
             ui->lineEdit->setText(s);
             ResultShown = true;
+            Decimal = false;
         }
     }
 
@@ -352,6 +369,7 @@ void MainWindow::on_OPexp_clicked(){
     {
         ui->lineEdit->setText("0");
         ResultShown = true;
+        Decimal = false;
     }
 
     else
@@ -360,6 +378,7 @@ void MainWindow::on_OPexp_clicked(){
         QString s = QString::number(qPow(x, 2));
         ui->lineEdit->setText(s);
         ResultShown = true;
+        Decimal = false;
     }
 }
 
@@ -370,6 +389,7 @@ void MainWindow::on_OPsqrt_clicked(){
     {
         ui->lineEdit->setText("0");
         ResultShown = true;
+        Decimal = false;
     }
 
     else
@@ -378,6 +398,7 @@ void MainWindow::on_OPsqrt_clicked(){
         QString s = QString::number(qSqrt(x));
         ui->lineEdit->setText(s);
         ResultShown = true;
+        Decimal = false;
     }
 }
 
@@ -387,6 +408,7 @@ void MainWindow::on_ClearButton_clicked()
     Values.clear();
     //Values.append(0);
     ResultShown = false;
+    Decimal = false;
 }
 
 void MainWindow::on_EqualsButton_clicked()
@@ -468,6 +490,7 @@ void MainWindow::on_EqualsButton_clicked()
                 Values.clear();
                 ResultShown;
                 ui->lineEdit->setText("0");
+                Decimal = false;
 
             }
             else if(lastOPused == operand::sum)
@@ -482,6 +505,7 @@ void MainWindow::on_EqualsButton_clicked()
                  ui->lineEdit->setText(s);
                  Values.clear();
                  ResultShown = true;
+                 Decimal = false;
             }
             else if(lastOPused == operand::min)
             {
@@ -495,6 +519,7 @@ void MainWindow::on_EqualsButton_clicked()
                 ui->lineEdit->setText(s);
                 Values.clear();
                 ResultShown = true;
+                Decimal = false;
             }
             else if(lastOPused == operand::divs)
             {
@@ -508,6 +533,7 @@ void MainWindow::on_EqualsButton_clicked()
                 ui->lineEdit->setText(s);
                 Values.clear();
                 ResultShown = true;
+                Decimal = false;
             }
             else if(lastOPused == operand::mult)
             {
@@ -521,6 +547,7 @@ void MainWindow::on_EqualsButton_clicked()
                 ui->lineEdit->setText(s);
                 Values.clear();
                 ResultShown = true;
+                Decimal = false;
             }
             else if(lastOPused == operand::expo)
             {
@@ -534,6 +561,7 @@ void MainWindow::on_EqualsButton_clicked()
                 ui->lineEdit->setText(s);
                 Values.clear();
                 ResultShown = true;
+                Decimal = false;
             }
             else if(lastOPused == operand::square)
             {
@@ -547,6 +575,7 @@ void MainWindow::on_EqualsButton_clicked()
                 ui->lineEdit->setText(s);
                 Values.clear();
                 ResultShown = true;
+                Decimal = false;
             }
 
 }
@@ -554,6 +583,7 @@ void MainWindow::on_EqualsButton_clicked()
 void MainWindow::on_CButton_clicked()
 {
     ui->lineEdit->clear();
+    Decimal = false;
 }
 
 void MainWindow::on_SignButton_clicked()
@@ -564,5 +594,23 @@ void MainWindow::on_SignButton_clicked()
     ui->lineEdit->clear();
     QString s = QString::number(x);
     ui->lineEdit->setText(s);
+
+}
+
+void MainWindow::on_Comma_clicked()
+{
+
+if(ui->lineEdit->text().isEmpty() && !Decimal){
+    ui->lineEdit->setText("0.");
+    ResultShown = false;
+    Decimal = true;
+}
+else if ((!ui->lineEdit->text().isEmpty()) && (!Decimal)){
+    ui->lineEdit->setText(ui->lineEdit->text() + ".");
+    Decimal = true;
+}
+else {
+
+}
 
 }

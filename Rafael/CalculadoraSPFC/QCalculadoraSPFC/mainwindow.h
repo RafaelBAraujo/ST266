@@ -49,6 +49,8 @@ private slots:
 
     void on_SignButton_clicked();
 
+    void on_Comma_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
