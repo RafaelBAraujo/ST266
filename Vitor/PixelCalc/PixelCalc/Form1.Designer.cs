@@ -338,7 +338,7 @@
             // 
             // group_box1
             // 
-            this.group_box1.BackColor = System.Drawing.SystemColors.Control;
+            this.group_box1.BackColor = System.Drawing.Color.Transparent;
             this.group_box1.Controls.Add(this.RB_Binario);
             this.group_box1.Controls.Add(this.RB_Octal);
             this.group_box1.Controls.Add(this.RB_Hexadecimal);
@@ -469,7 +469,7 @@
             // 
             // group_box2
             // 
-            this.group_box2.BackColor = System.Drawing.SystemColors.Control;
+            this.group_box2.BackColor = System.Drawing.Color.Transparent;
             this.group_box2.Controls.Add(this.botao_SubtrairCor);
             this.group_box2.Controls.Add(this.botao_SomarCor);
             this.group_box2.Controls.Add(this.label7);
@@ -655,7 +655,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 216);
+            this.BackgroundImage = global::PixelCalc.Properties.Resources.bakckground;
+            this.ClientSize = new System.Drawing.Size(364, 216);
             this.Controls.Add(this.group_box2);
             this.Controls.Add(this.botao_F);
             this.Controls.Add(this.botao_E);
