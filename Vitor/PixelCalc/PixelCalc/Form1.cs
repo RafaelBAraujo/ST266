@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Linq;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace PixelCalc
 {
@@ -822,7 +823,6 @@ namespace PixelCalc
                     textBox1.Text = "Erro";
                     resp = 0;
                 }
-                    
             }
 
         }
@@ -846,7 +846,7 @@ namespace PixelCalc
                     botao_D.Enabled = false;
                     botao_E.Enabled = false;
                     botao_E.Enabled = false;
-                    Height = 255;  
+                    Height = 280;  
                     break;
                 //Base Octal
                 case 3:
@@ -875,7 +875,7 @@ namespace PixelCalc
 
         private void RB_Hexadecimal_CheckedChanged(object sender, EventArgs e)
         {
-            Height = 290;
+            Height = 310;
             botao_A.Visible = true;
             botao_B.Visible = true;
             botao_C.Visible = true;
@@ -954,7 +954,7 @@ namespace PixelCalc
                     botao_D.Enabled = false;
                     botao_E.Enabled = false;
                     botao_F.Enabled = false;
-                    Height = 255;
+                    Height = 280;
                     break;
                 //Base Binária
                 case 4:
@@ -1006,7 +1006,7 @@ namespace PixelCalc
                     botao_D.Enabled = false;
                     botao_E.Enabled = false;
                     botao_F.Enabled = false;
-                    Height = 255;
+                    Height = 280;
                     break;
                 //Base Octal
                 case 3:
@@ -1149,7 +1149,6 @@ namespace PixelCalc
             if (text_B2.Text == "")
                 text_B2.Text = "0";
         }
-
         private void botao_cor_Click(object sender, EventArgs e)
         {
             if (cor_ativ==0)//Desativado

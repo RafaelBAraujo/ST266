@@ -86,7 +86,7 @@
             // botao_1
             // 
             this.botao_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_1.Location = new System.Drawing.Point(39, 164);
+            this.botao_1.Location = new System.Drawing.Point(39, 173);
             this.botao_1.Name = "botao_1";
             this.botao_1.Size = new System.Drawing.Size(75, 23);
             this.botao_1.TabIndex = 0;
@@ -98,10 +98,10 @@
             // botao_2
             // 
             this.botao_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_2.Location = new System.Drawing.Point(111, 164);
+            this.botao_2.Location = new System.Drawing.Point(114, 173);
             this.botao_2.Name = "botao_2";
             this.botao_2.Size = new System.Drawing.Size(75, 23);
-            this.botao_2.TabIndex = 1;
+            this.botao_2.TabIndex = 0;
             this.botao_2.TabStop = false;
             this.botao_2.Text = "2";
             this.botao_2.UseVisualStyleBackColor = true;
@@ -110,10 +110,10 @@
             // botao_3
             // 
             this.botao_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_3.Location = new System.Drawing.Point(183, 164);
+            this.botao_3.Location = new System.Drawing.Point(189, 173);
             this.botao_3.Name = "botao_3";
             this.botao_3.Size = new System.Drawing.Size(75, 23);
-            this.botao_3.TabIndex = 2;
+            this.botao_3.TabIndex = 0;
             this.botao_3.TabStop = false;
             this.botao_3.Text = "3";
             this.botao_3.UseVisualStyleBackColor = true;
@@ -122,10 +122,10 @@
             // botao_4
             // 
             this.botao_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_4.Location = new System.Drawing.Point(39, 144);
+            this.botao_4.Location = new System.Drawing.Point(39, 150);
             this.botao_4.Name = "botao_4";
             this.botao_4.Size = new System.Drawing.Size(75, 23);
-            this.botao_4.TabIndex = 3;
+            this.botao_4.TabIndex = 0;
             this.botao_4.TabStop = false;
             this.botao_4.Text = "4";
             this.botao_4.UseVisualStyleBackColor = true;
@@ -134,10 +134,10 @@
             // botao_5
             // 
             this.botao_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_5.Location = new System.Drawing.Point(111, 144);
+            this.botao_5.Location = new System.Drawing.Point(114, 150);
             this.botao_5.Name = "botao_5";
             this.botao_5.Size = new System.Drawing.Size(75, 23);
-            this.botao_5.TabIndex = 4;
+            this.botao_5.TabIndex = 0;
             this.botao_5.TabStop = false;
             this.botao_5.Text = "5";
             this.botao_5.UseVisualStyleBackColor = true;
@@ -146,10 +146,10 @@
             // botao_6
             // 
             this.botao_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_6.Location = new System.Drawing.Point(183, 144);
+            this.botao_6.Location = new System.Drawing.Point(189, 150);
             this.botao_6.Name = "botao_6";
             this.botao_6.Size = new System.Drawing.Size(75, 23);
-            this.botao_6.TabIndex = 5;
+            this.botao_6.TabIndex = 0;
             this.botao_6.TabStop = false;
             this.botao_6.Text = "6";
             this.botao_6.UseVisualStyleBackColor = true;
@@ -158,10 +158,10 @@
             // botao_7
             // 
             this.botao_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_7.Location = new System.Drawing.Point(39, 124);
+            this.botao_7.Location = new System.Drawing.Point(39, 127);
             this.botao_7.Name = "botao_7";
             this.botao_7.Size = new System.Drawing.Size(75, 23);
-            this.botao_7.TabIndex = 6;
+            this.botao_7.TabIndex = 0;
             this.botao_7.TabStop = false;
             this.botao_7.Text = "7";
             this.botao_7.UseVisualStyleBackColor = true;
@@ -170,10 +170,10 @@
             // botao_8
             // 
             this.botao_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_8.Location = new System.Drawing.Point(111, 124);
+            this.botao_8.Location = new System.Drawing.Point(114, 127);
             this.botao_8.Name = "botao_8";
             this.botao_8.Size = new System.Drawing.Size(75, 23);
-            this.botao_8.TabIndex = 7;
+            this.botao_8.TabIndex = 0;
             this.botao_8.TabStop = false;
             this.botao_8.Text = "8";
             this.botao_8.UseVisualStyleBackColor = true;
@@ -182,10 +182,10 @@
             // botao_9
             // 
             this.botao_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_9.Location = new System.Drawing.Point(183, 124);
+            this.botao_9.Location = new System.Drawing.Point(189, 127);
             this.botao_9.Name = "botao_9";
             this.botao_9.Size = new System.Drawing.Size(75, 23);
-            this.botao_9.TabIndex = 8;
+            this.botao_9.TabIndex = 0;
             this.botao_9.TabStop = false;
             this.botao_9.Text = "9";
             this.botao_9.UseVisualStyleBackColor = true;
@@ -194,10 +194,10 @@
             // botao_0
             // 
             this.botao_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_0.Location = new System.Drawing.Point(111, 184);
+            this.botao_0.Location = new System.Drawing.Point(114, 196);
             this.botao_0.Name = "botao_0";
             this.botao_0.Size = new System.Drawing.Size(75, 23);
-            this.botao_0.TabIndex = 9;
+            this.botao_0.TabIndex = 0;
             this.botao_0.TabStop = false;
             this.botao_0.Text = "0";
             this.botao_0.UseVisualStyleBackColor = true;
@@ -219,10 +219,10 @@
             // botao_apagar
             // 
             this.botao_apagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_apagar.Location = new System.Drawing.Point(183, 104);
+            this.botao_apagar.Location = new System.Drawing.Point(189, 104);
             this.botao_apagar.Name = "botao_apagar";
             this.botao_apagar.Size = new System.Drawing.Size(75, 23);
-            this.botao_apagar.TabIndex = 11;
+            this.botao_apagar.TabIndex = 0;
             this.botao_apagar.TabStop = false;
             this.botao_apagar.Text = "←";
             this.botao_apagar.UseVisualStyleBackColor = true;
@@ -231,10 +231,10 @@
             // botao_limpar
             // 
             this.botao_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_limpar.Location = new System.Drawing.Point(111, 104);
+            this.botao_limpar.Location = new System.Drawing.Point(114, 104);
             this.botao_limpar.Name = "botao_limpar";
             this.botao_limpar.Size = new System.Drawing.Size(75, 23);
-            this.botao_limpar.TabIndex = 12;
+            this.botao_limpar.TabIndex = 0;
             this.botao_limpar.TabStop = false;
             this.botao_limpar.Text = "C";
             this.botao_limpar.UseVisualStyleBackColor = true;
@@ -243,10 +243,10 @@
             // botao_virgula
             // 
             this.botao_virgula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_virgula.Location = new System.Drawing.Point(183, 184);
+            this.botao_virgula.Location = new System.Drawing.Point(189, 196);
             this.botao_virgula.Name = "botao_virgula";
             this.botao_virgula.Size = new System.Drawing.Size(75, 23);
-            this.botao_virgula.TabIndex = 13;
+            this.botao_virgula.TabIndex = 0;
             this.botao_virgula.TabStop = false;
             this.botao_virgula.Text = ",";
             this.botao_virgula.UseVisualStyleBackColor = true;
@@ -255,10 +255,10 @@
             // botao_somar
             // 
             this.botao_somar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_somar.Location = new System.Drawing.Point(256, 164);
+            this.botao_somar.Location = new System.Drawing.Point(264, 173);
             this.botao_somar.Name = "botao_somar";
             this.botao_somar.Size = new System.Drawing.Size(75, 23);
-            this.botao_somar.TabIndex = 14;
+            this.botao_somar.TabIndex = 0;
             this.botao_somar.TabStop = false;
             this.botao_somar.Text = "+";
             this.botao_somar.UseVisualStyleBackColor = true;
@@ -267,10 +267,10 @@
             // botao_igual
             // 
             this.botao_igual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_igual.Location = new System.Drawing.Point(256, 184);
+            this.botao_igual.Location = new System.Drawing.Point(264, 196);
             this.botao_igual.Name = "botao_igual";
             this.botao_igual.Size = new System.Drawing.Size(75, 23);
-            this.botao_igual.TabIndex = 15;
+            this.botao_igual.TabIndex = 0;
             this.botao_igual.TabStop = false;
             this.botao_igual.Text = "=";
             this.botao_igual.UseVisualStyleBackColor = true;
@@ -279,10 +279,10 @@
             // botao_subtrair
             // 
             this.botao_subtrair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_subtrair.Location = new System.Drawing.Point(256, 144);
+            this.botao_subtrair.Location = new System.Drawing.Point(264, 150);
             this.botao_subtrair.Name = "botao_subtrair";
             this.botao_subtrair.Size = new System.Drawing.Size(75, 23);
-            this.botao_subtrair.TabIndex = 16;
+            this.botao_subtrair.TabIndex = 0;
             this.botao_subtrair.TabStop = false;
             this.botao_subtrair.Text = "-";
             this.botao_subtrair.UseVisualStyleBackColor = true;
@@ -291,10 +291,10 @@
             // botao_multiplicar
             // 
             this.botao_multiplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_multiplicar.Location = new System.Drawing.Point(256, 124);
+            this.botao_multiplicar.Location = new System.Drawing.Point(264, 127);
             this.botao_multiplicar.Name = "botao_multiplicar";
             this.botao_multiplicar.Size = new System.Drawing.Size(75, 23);
-            this.botao_multiplicar.TabIndex = 17;
+            this.botao_multiplicar.TabIndex = 0;
             this.botao_multiplicar.TabStop = false;
             this.botao_multiplicar.Text = "*";
             this.botao_multiplicar.UseVisualStyleBackColor = true;
@@ -303,10 +303,10 @@
             // botao_dividir
             // 
             this.botao_dividir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_dividir.Location = new System.Drawing.Point(256, 104);
+            this.botao_dividir.Location = new System.Drawing.Point(264, 104);
             this.botao_dividir.Name = "botao_dividir";
             this.botao_dividir.Size = new System.Drawing.Size(75, 23);
-            this.botao_dividir.TabIndex = 18;
+            this.botao_dividir.TabIndex = 0;
             this.botao_dividir.TabStop = false;
             this.botao_dividir.Text = "÷";
             this.botao_dividir.UseVisualStyleBackColor = true;
@@ -315,10 +315,10 @@
             // botao_maisoumenos
             // 
             this.botao_maisoumenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_maisoumenos.Location = new System.Drawing.Point(39, 184);
+            this.botao_maisoumenos.Location = new System.Drawing.Point(39, 196);
             this.botao_maisoumenos.Name = "botao_maisoumenos";
             this.botao_maisoumenos.Size = new System.Drawing.Size(75, 23);
-            this.botao_maisoumenos.TabIndex = 19;
+            this.botao_maisoumenos.TabIndex = 0;
             this.botao_maisoumenos.TabStop = false;
             this.botao_maisoumenos.Text = "±";
             this.botao_maisoumenos.UseVisualStyleBackColor = true;
@@ -330,7 +330,7 @@
             this.botao_cor.Location = new System.Drawing.Point(39, 104);
             this.botao_cor.Name = "botao_cor";
             this.botao_cor.Size = new System.Drawing.Size(75, 23);
-            this.botao_cor.TabIndex = 20;
+            this.botao_cor.TabIndex = 0;
             this.botao_cor.TabStop = false;
             this.botao_cor.Text = "Color";
             this.botao_cor.UseVisualStyleBackColor = true;
@@ -338,7 +338,7 @@
             // 
             // group_box1
             // 
-            this.group_box1.BackColor = System.Drawing.SystemColors.Control;
+            this.group_box1.BackColor = System.Drawing.Color.Transparent;
             this.group_box1.Controls.Add(this.RB_Binario);
             this.group_box1.Controls.Add(this.RB_Octal);
             this.group_box1.Controls.Add(this.RB_Hexadecimal);
@@ -397,7 +397,7 @@
             // 
             // botao_A
             // 
-            this.botao_A.Location = new System.Drawing.Point(39, 204);
+            this.botao_A.Location = new System.Drawing.Point(39, 219);
             this.botao_A.Name = "botao_A";
             this.botao_A.Size = new System.Drawing.Size(75, 23);
             this.botao_A.TabIndex = 0;
@@ -409,7 +409,7 @@
             // 
             // botao_B
             // 
-            this.botao_B.Location = new System.Drawing.Point(111, 204);
+            this.botao_B.Location = new System.Drawing.Point(114, 219);
             this.botao_B.Name = "botao_B";
             this.botao_B.Size = new System.Drawing.Size(75, 23);
             this.botao_B.TabIndex = 0;
@@ -421,7 +421,7 @@
             // 
             // botao_C
             // 
-            this.botao_C.Location = new System.Drawing.Point(183, 204);
+            this.botao_C.Location = new System.Drawing.Point(189, 219);
             this.botao_C.Name = "botao_C";
             this.botao_C.Size = new System.Drawing.Size(75, 23);
             this.botao_C.TabIndex = 0;
@@ -433,7 +433,7 @@
             // 
             // botao_D
             // 
-            this.botao_D.Location = new System.Drawing.Point(39, 224);
+            this.botao_D.Location = new System.Drawing.Point(39, 242);
             this.botao_D.Name = "botao_D";
             this.botao_D.Size = new System.Drawing.Size(75, 23);
             this.botao_D.TabIndex = 0;
@@ -445,7 +445,7 @@
             // 
             // botao_E
             // 
-            this.botao_E.Location = new System.Drawing.Point(111, 224);
+            this.botao_E.Location = new System.Drawing.Point(114, 242);
             this.botao_E.Name = "botao_E";
             this.botao_E.Size = new System.Drawing.Size(75, 23);
             this.botao_E.TabIndex = 0;
@@ -457,7 +457,7 @@
             // 
             // botao_F
             // 
-            this.botao_F.Location = new System.Drawing.Point(183, 224);
+            this.botao_F.Location = new System.Drawing.Point(189, 242);
             this.botao_F.Name = "botao_F";
             this.botao_F.Size = new System.Drawing.Size(75, 23);
             this.botao_F.TabIndex = 0;
@@ -469,7 +469,7 @@
             // 
             // group_box2
             // 
-            this.group_box2.BackColor = System.Drawing.SystemColors.Control;
+            this.group_box2.BackColor = System.Drawing.Color.Transparent;
             this.group_box2.Controls.Add(this.botao_SubtrairCor);
             this.group_box2.Controls.Add(this.botao_SomarCor);
             this.group_box2.Controls.Add(this.label7);
@@ -655,15 +655,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 216);
-            this.Controls.Add(this.group_box2);
+            this.BackgroundImage = global::PixelCalc.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(364, 241);
             this.Controls.Add(this.botao_F);
             this.Controls.Add(this.botao_E);
             this.Controls.Add(this.botao_D);
             this.Controls.Add(this.botao_C);
             this.Controls.Add(this.botao_B);
             this.Controls.Add(this.botao_A);
-            this.Controls.Add(this.group_box1);
             this.Controls.Add(this.botao_cor);
             this.Controls.Add(this.botao_maisoumenos);
             this.Controls.Add(this.botao_dividir);
@@ -674,7 +674,6 @@
             this.Controls.Add(this.botao_virgula);
             this.Controls.Add(this.botao_limpar);
             this.Controls.Add(this.botao_apagar);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.botao_0);
             this.Controls.Add(this.botao_9);
             this.Controls.Add(this.botao_8);
@@ -685,6 +684,10 @@
             this.Controls.Add(this.botao_3);
             this.Controls.Add(this.botao_2);
             this.Controls.Add(this.botao_1);
+            this.Controls.Add(this.group_box2);
+            this.Controls.Add(this.group_box1);
+            this.Controls.Add(this.textBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;

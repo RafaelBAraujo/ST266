@@ -19,3 +19,7 @@ C:\Users\Vitor\Documents\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe.config
 C:\Users\Vitor\Documents\PixelCalc\PixelCalc\obj\Debug\PixelCalc.exe
 C:\Users\Vitor\Documents\PixelCalc\PixelCalc\obj\Debug\PixelCalc.pdb
 C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.Form1.resources
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.exe.manifest
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\bin\Debug\PixelCalc.application
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.exe.manifest
+C:\Users\Vitor\Documents\GitHub\ST266\Vitor\PixelCalc\PixelCalc\obj\Debug\PixelCalc.application
