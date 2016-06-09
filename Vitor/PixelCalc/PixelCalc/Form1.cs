@@ -623,11 +623,14 @@ namespace PixelCalc
 
         private void botao_igual_Click(object sender, EventArgs e)
         {
-            calcular(count);
-            RB_Binario.Enabled = true;
-            RB_Decimal.Enabled = true;
-            RB_Hexadecimal.Enabled = true;
-            RB_Octal.Enabled = true;
+            if (textBox1.Text!="Erro")
+            {
+                calcular(count);
+                RB_Binario.Enabled = true;
+                RB_Decimal.Enabled = true;
+                RB_Hexadecimal.Enabled = true;
+                RB_Octal.Enabled = true;
+            }
         }
 
         private void botao_maisoumenos_Click(object sender, EventArgs e)
@@ -720,7 +723,7 @@ namespace PixelCalc
                         {
                             Converter_Base(8, 10);
                             resp = num1 - float.Parse(resFinal);
-                            if (resp>0)
+                            if (resp > 0)
                             {
                                 textBox1.Text = resp.ToString();
                                 Converter_Base(10, 8);
@@ -730,13 +733,13 @@ namespace PixelCalc
                                 textBox1.Text = "";
                                 RB_Decimal.Checked = true;
                                 textBox1.Text = resp.ToString();
-                            }                            
+                            }
                         }
                         else if (tipo_exib == 4)
                         {
                             Converter_Base(2, 10);
                             resp = num1 - float.Parse(resFinal);
-                            if (resp>0)
+                            if (resp > 0)
                             {
                                 textBox1.Text = resp.ToString();
                                 Converter_Base(10, 2);
@@ -749,7 +752,7 @@ namespace PixelCalc
                             }
                         }
                         break;
-                        case 3:
+                    case 3:
                         if (tipo_exib == 1)
                         {
                             resp = num1 * float.Parse(textBox1.Text);
@@ -806,11 +809,20 @@ namespace PixelCalc
                         }
                         break;
                 }
-                long aux = Convert.ToInt64(resp);
-                if (resp == aux)
-                    existe_virgula = false;
-                else
-                    existe_virgula = true;
+                try
+                {
+                    long aux = Convert.ToInt64(resp);
+                    if (resp == aux)
+                        existe_virgula = false;
+                    else
+                        existe_virgula = true;
+                }
+                catch(OverflowException)
+                {
+                    textBox1.Text = "Erro";
+                    resp = 0;
+                }
+                    
             }
 
         }
