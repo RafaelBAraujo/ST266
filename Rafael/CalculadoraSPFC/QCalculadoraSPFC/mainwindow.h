@@ -51,6 +51,8 @@ private slots:
 
     void on_Comma_clicked();
 
+    void on_Emblem_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
