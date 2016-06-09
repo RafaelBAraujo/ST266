@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "about.h"
 #include <QtGui>
 #include <QtCore>
 #include <QtWidgets>
@@ -404,11 +405,11 @@ void MainWindow::on_OPsqrt_clicked(){
 
 void MainWindow::on_ClearButton_clicked()
 {
+
     ui->lineEdit->clear();
-    Values.clear();
-    //Values.append(0);
-    ResultShown = false;
+    ui->lineEdit->setText("0");
     Decimal = false;
+
 }
 
 void MainWindow::on_EqualsButton_clicked()
@@ -583,6 +584,10 @@ void MainWindow::on_EqualsButton_clicked()
 void MainWindow::on_CButton_clicked()
 {
     ui->lineEdit->clear();
+    ui->lineEdit->setText("0");
+    Values.clear();
+    Values.append(0);
+    ResultShown = false;
     Decimal = false;
 }
 
@@ -613,4 +618,11 @@ else {
 
 }
 
+}
+
+void MainWindow::on_Emblem_clicked()
+{
+    About about_window;
+    about_window.setModal(true);
+    about_window.exec();
 }
