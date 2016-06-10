@@ -26,6 +26,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 
 
     ui->setupUi(this);
+    //C:/Users/Rafael/Desktop/NEW PROJECT/CalculadoraSPFC/sp.ico
+    ui->Emblem->setIcon(QIcon(":/MyImages/sp.ico"));
+    ui->Emblem->setIconSize(QSize(70, 50));
+
+    ui->Emblem->setStyleSheet("background-color:red");
     ui->Num0->setStyleSheet("background-color:red");
     ui->Num1->setStyleSheet("background-color:red");
     ui->Num2->setStyleSheet("background-color:red");
@@ -50,10 +55,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->ClearButton->setStyleSheet("background-color:black");
     ui->CButton->setStyleSheet("background-color:black");
     //ui->OFFButton->setStyleSheet("background-color:black");
-
-    ui->Emblem->setIcon(QIcon("C:/Users/Rafael/Desktop/NEW PROJECT/CalculadoraSPFC/sp.ico"));
-    ui->Emblem->setIconSize(QSize(70, 50));
-    ui->Emblem->setStyleSheet("background-color:red");
 
     Values.clear();
     ui->lineEdit->clear();
@@ -605,18 +606,18 @@ void MainWindow::on_SignButton_clicked()
 void MainWindow::on_Comma_clicked()
 {
 
-if(ui->lineEdit->text().isEmpty() && !Decimal){
-    ui->lineEdit->setText("0.");
-    ResultShown = false;
-    Decimal = true;
-}
-else if ((!ui->lineEdit->text().isEmpty()) && (!Decimal)){
-    ui->lineEdit->setText(ui->lineEdit->text() + ".");
-    Decimal = true;
-}
-else {
+    if(ui->lineEdit->text().isEmpty() && !Decimal){
+        ui->lineEdit->setText("0.");
+         ResultShown = false;
+        Decimal = true;
+    }
+    else if ((!ui->lineEdit->text().isEmpty()) && (!Decimal)){
+        ui->lineEdit->setText(ui->lineEdit->text() + ".");
+        Decimal = true;
+    }
+    else {
 
-}
+    }
 
 }
 

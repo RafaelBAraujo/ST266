@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/MyImages">
         <file>saopaulo.png</file>
+        <file>sp.ico</file>
     </qresource>
 </RCC>

@@ -171,6 +171,7 @@ compiler_rcc_make_all: debug\qrc_myresources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_myresources.cpp
 debug\qrc_myresources.cpp: ..\QCalculadoraSPFC\myresources.qrc \
+		..\QCalculadoraSPFC\sp.ico \
 		..\QCalculadoraSPFC\saopaulo.png
 	C:\Qt\5.6\msvc2013_64\bin\rcc.exe -name myresources ..\QCalculadoraSPFC\myresources.qrc -o debug\qrc_myresources.cpp
 
@@ -1672,14 +1673,6 @@ debug\mainwindow.obj: ..\QCalculadoraSPFC\mainwindow.cpp ../QCalculadoraSPFC/mai
 		C:\Qt\5.6\msvc2013_64\include\QtWidgets\qtoolbutton.h \
 		C:\Qt\5.6\msvc2013_64\include\QtWidgets\qtwidgetsversion.h \
 		ui_mainwindow.h \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QAction \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QApplication \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QButtonGroup \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QHeaderView \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QLineEdit \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QMenuBar \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QToolBar \
 		../QCalculadoraSPFC/about.h \
 		C:\Qt\5.6\msvc2013_64\include\QtWidgets\QDialog \
 		C:\Qt\5.6\msvc2013_64\include\QtCore\QDebug \

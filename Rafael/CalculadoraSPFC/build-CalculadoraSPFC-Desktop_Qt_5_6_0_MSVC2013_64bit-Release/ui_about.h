@@ -14,16 +14,15 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_About
 {
 public:
-    QDialogButtonBox *buttonBox;
     QLabel *Emblem_label;
     QLabel *Text_label;
     QLabel *label;
@@ -33,17 +32,13 @@ public:
     QLabel *label_5;
     QLabel *label_6;
     QLabel *label_7;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *About)
     {
         if (About->objectName().isEmpty())
             About->setObjectName(QStringLiteral("About"));
         About->resize(363, 160);
-        buttonBox = new QDialogButtonBox(About);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(17, 127, 341, 32));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         Emblem_label = new QLabel(About);
         Emblem_label->setObjectName(QStringLiteral("Emblem_label"));
         Emblem_label->setGeometry(QRect(12, 12, 100, 100));
@@ -81,10 +76,12 @@ public:
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setGeometry(QRect(274, -2, 91, 16));
         label_7->setFont(font1);
+        pushButton = new QPushButton(About);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(281, 130, 75, 23));
 
         retranslateUi(About);
-        QObject::connect(buttonBox, SIGNAL(accepted()), About, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), About, SLOT(reject()));
+        QObject::connect(pushButton, SIGNAL(clicked()), About, SLOT(close()));
 
         QMetaObject::connectSlotsByName(About);
     } // setupUi
@@ -101,6 +98,7 @@ public:
         label_5->setText(QApplication::translate("About", "Last updated: 06/09/2016", 0));
         label_6->setText(QApplication::translate("About", "Thanks for choosing CalculadoraSPFC!", 0));
         label_7->setText(QApplication::translate("About", "Barbaroto's Software", 0));
+        pushButton->setText(QApplication::translate("About", "OK", 0));
     } // retranslateUi
 
 };
